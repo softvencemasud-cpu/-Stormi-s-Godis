@@ -4,8 +4,8 @@
 
 <style>
   .m-collection-dark {
-    background-color: #110E0D;
-    color: #FAF7F2;
+    background-color: #FAF7F2;
+    color: #110E0D;
     padding: 60px 0 100px;
     min-height: 80vh;
     width: 100%;
@@ -29,7 +29,7 @@
   .m-collection-dark__title {
     font-family: 'Cormorant Garamond', serif !important;
     font-size: 48px !important;
-    color: #FAF7F2 !important;
+    color: #110E0D !important;
     margin-bottom: 12px !important;
     font-weight: 600 !important;
   }
@@ -40,7 +40,7 @@
   }
   .m-collection-dark__desc {
     font-size: 15px;
-    color: #D5CBC0;
+    color: #6E6259;
     line-height: 1.6;
   }
   .m-collection-dark__grid {
@@ -62,37 +62,40 @@
     }
   }
 
+  /* Flat Clean White Cards - NO SHADOW & NO HOVER LIFT */
   .stormis-coll-card {
-    background: #1A1513;
+    background: #FFFFFF;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid #382E29;
-    transition: all 0.35s ease;
+    border: 1px solid #E8E1D9;
+    transition: border-color 0.25s ease;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     box-sizing: border-box;
     width: 100%;
     text-decoration: none;
+    box-shadow: none !important;
+    transform: none !important;
   }
   .stormis-coll-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.6);
-    border-color: #D4AF37;
+    border-color: #C98D28 !important;
+    box-shadow: none !important;
+    transform: none !important;
   }
   .stormis-coll-card__media {
     position: relative;
     width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    background-color: #161210;
+    background-color: #F4EFEA;
   }
   .stormis-coll-card__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: opacity 0.4s ease, transform 0.5s ease;
+    transition: opacity 0.4s ease;
   }
   .stormis-coll-card__img--hover {
     position: absolute;
@@ -105,15 +108,14 @@
   }
   .stormis-coll-card:hover .stormis-coll-card__img--hover {
     opacity: 1;
-    transform: scale(1.05);
   }
   .stormis-coll-card__badge {
     position: absolute;
     top: 8px;
     left: 8px;
     padding: 3px 7px;
-    background: #E5A93C;
-    color: #110E0D;
+    background: #C98D28;
+    color: #FFFFFF;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -126,6 +128,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    background: #FFFFFF;
   }
   @media (max-width: 640px) {
     .stormis-coll-card__body {
@@ -136,7 +139,7 @@
     font-family: 'Cormorant Garamond', serif !important;
     font-size: 20px !important;
     line-height: 1.2 !important;
-    color: #FAF7F2 !important;
+    color: #110E0D !important;
     margin-bottom: 6px !important;
     font-weight: 600 !important;
   }
@@ -148,7 +151,7 @@
   }
   .stormis-coll-card__desc {
     font-size: 12px;
-    color: #D5CBC0;
+    color: #6E6259;
     line-height: 1.45;
     margin-bottom: 12px;
     flex-grow: 1;
@@ -163,22 +166,22 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
-    border-top: 1px solid #2D2520;
+    border-top: 1px solid #E8E1D9;
     margin-top: auto;
   }
   .stormis-coll-card__price {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 17px;
     font-weight: 700;
-    color: #E5A93C;
+    color: #C98D28;
   }
   .stormis-coll-card__btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 8px 14px;
-    background: #E5A93C;
-    color: #110E0D;
+    background: #C98D28;
+    color: #FFFFFF;
     border: none;
     border-radius: 3px;
     font-size: 11px;
@@ -187,11 +190,12 @@
     text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;
-    transition: all 0.25s ease;
+    transition: background-color 0.25s ease;
     white-space: nowrap;
+    box-shadow: none !important;
   }
   .stormis-coll-card__btn:hover {
-    background: #F4C468;
+    background: #B37A1D;
   }
 
   @media (max-width: 640px) {
@@ -240,7 +244,7 @@
               <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title }}" class="stormis-coll-card__img" loading="lazy">
             </div>
             <div class="stormis-coll-card__body">
-              <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
+              <div style="color: #C98D28; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
               <h3 class="stormis-coll-card__name">{{ product.title }}</h3>
               <p class="stormis-coll-card__desc">{{ product.description | strip_html | truncatewords: 15 }}</p>
               <div class="stormis-coll-card__footer">
@@ -261,7 +265,7 @@
             <img src="{{ 'prod-berry-lifestyle.jpg' | asset_url }}" alt="Swedish Berry Collection" class="stormis-coll-card__img stormis-coll-card__img--hover" loading="lazy" width="400" height="400">
           </div>
           <div class="stormis-coll-card__body">
-            <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
+            <div style="color: #C98D28; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
             <h3 class="stormis-coll-card__name">Swedish Berry Collection</h3>
             <p class="stormis-coll-card__desc">Wild lingonberry & raspberry artisan gummies dusted with sour crystal sugar.</p>
             <div class="stormis-coll-card__footer">
@@ -279,7 +283,7 @@
             <img src="{{ 'prod-choco-lifestyle.jpg' | asset_url }}" alt="Nordic Chocolate Selection" class="stormis-coll-card__img stormis-coll-card__img--hover" loading="lazy" width="400" height="400">
           </div>
           <div class="stormis-coll-card__body">
-            <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
+            <div style="color: #C98D28; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
             <h3 class="stormis-coll-card__name">Nordic Chocolate Selection</h3>
             <p class="stormis-coll-card__desc">Single-origin dark chocolate pralines & cocoa truffles with sea salt & gold.</p>
             <div class="stormis-coll-card__footer">
@@ -297,7 +301,7 @@
             <img src="{{ 'prod-mix-lifestyle.jpg' | asset_url }}" alt="Scandinavian Candy Mix" class="stormis-coll-card__img stormis-coll-card__img--hover" loading="lazy" width="400" height="400">
           </div>
           <div class="stormis-coll-card__body">
-            <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 4.9</div>
+            <div style="color: #C98D28; font-size: 12px; margin-bottom: 4px;">★★★★★ 4.9</div>
             <h3 class="stormis-coll-card__name">Scandinavian Candy Mix</h3>
             <p class="stormis-coll-card__desc">Sour raspberry skulls, sweet salmiak licorice diamonds, and fruit pastilles.</p>
             <div class="stormis-coll-card__footer">
@@ -315,7 +319,7 @@
             <img src="{{ 'stormis-lifestyle-banner.jpg' | asset_url }}" alt="Premium Swedish Gift Box" class="stormis-coll-card__img stormis-coll-card__img--hover" loading="lazy" width="400" height="400">
           </div>
           <div class="stormis-coll-card__body">
-            <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
+            <div style="color: #C98D28; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
             <h3 class="stormis-coll-card__name">Premium Swedish Gift Box</h3>
             <p class="stormis-coll-card__desc">Rigid keepsake gift hamper box with gold debossed emblem and full assortment.</p>
             <div class="stormis-coll-card__footer">

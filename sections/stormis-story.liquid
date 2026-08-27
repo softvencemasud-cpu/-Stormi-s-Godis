@@ -1,13 +1,15 @@
 <style>
   .stormis-about-dark {
-    padding: 110px 0;
-    background-color: #161210;
-    border-top: 1px solid #28201B;
-    border-bottom: 1px solid #28201B;
+    padding: 100px 0;
+    background-color: #FFFFFF;
+    border-top: 1px solid #E8E1D9;
+    border-bottom: 1px solid #E8E1D9;
+    width: 100%;
+    box-sizing: border-box;
   }
   @media (max-width: 767px) {
     .stormis-about-dark {
-      padding: 65px 0;
+      padding: 60px 0;
     }
   }
   .stormis-about-dark__container {
@@ -18,7 +20,7 @@
   .stormis-about-dark__grid {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
-    gap: 70px;
+    gap: 60px;
     align-items: center;
   }
   @media (max-width: 991px) {
@@ -27,80 +29,78 @@
       gap: 40px;
     }
   }
-  .stormis-about-dark__header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-  .stormis-about-dark__title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 44px;
-    line-height: 1.15;
-    color: #FAF7F2;
-    margin-bottom: 24px;
-    font-weight: 600;
-  }
-  @media (max-width: 767px) {
-    .stormis-about-dark__title {
-      font-size: 32px;
-    }
-  }
-  .stormis-about-dark__title span {
-    font-family: 'Great Vibes', cursive;
-    color: #E5A93C;
-    font-size: 56px;
-  }
-  .stormis-about-dark__text {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #D5CBC0;
-    margin-bottom: 22px;
-  }
-  .stormis-about-dark__image-wrap {
+  .stormis-pedestal-wrap {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #D4AF37;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    aspect-ratio: 4 / 3;
+    border: 1px solid #E8E1D9;
+    box-shadow: none !important;
   }
-  .stormis-about-dark__img {
+  .stormis-pedestal-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.6s ease;
   }
-  .stormis-about-dark__image-wrap:hover .stormis-about-dark__img {
-    transform: scale(1.04);
+  .stormis-about-dark__title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 42px !important;
+    line-height: 1.15 !important;
+    color: #110E0D !important;
+    margin-bottom: 20px !important;
+    font-weight: 600 !important;
+  }
+  @media (max-width: 767px) {
+    .stormis-about-dark__title {
+      font-size: 28px !important;
+    }
+  }
+  .stormis-about-dark__p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #6E6259;
+    margin-bottom: 20px;
+  }
+  .stormis-about-dark__quote {
+    border-left: 2px solid #C98D28;
+    padding-left: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-style: italic;
+    color: #110E0D;
+    margin: 24px 0 30px;
   }
 </style>
 
 <section class="stormis-about-dark">
   <div class="stormis-about-dark__container">
     <div class="stormis-about-dark__grid">
-      <div>
-        <div class="stormis-gold-divider" style="justify-content: flex-start; margin-bottom: 16px;">
-          <span>~ ABOUT <span class="stormis-script" style="font-size: 30px;">Stormi’s Godis</span> ~</span>
-        </div>
-        <h2 class="stormis-about-dark__title">
-          Where Swedish Sweetness Meets <span>Artisan Passion</span>
-        </h2>
-        <p class="stormis-about-dark__text">
-          The atelier where confectionery of your dreams is crafted in small batches. The perfect destination to satisfy your sophisticated sweet cravings and soothe your senses with the aesthetic charm of Scandinavian sweets.
-        </p>
-        <p class="stormis-about-dark__text">
-          A place where you can experience the harmonious balance between rich dark cocoa, vibrant wild berries, and authentic salted licorice. Every treat is created to turn everyday moments into celebrations.
-        </p>
-        <div style="margin-top: 36px;">
-          <a href="/collections/all" class="stormis-gold-btn">
-            Explore Menu Now
-          </a>
-        </div>
+      <!-- Pedestal Display Photo -->
+      <div class="stormis-pedestal-wrap">
+        <img src="{{ 'stormis-brand-story.jpg' | asset_url }}" alt="Stormi’s Godis Pedestal Showcase" class="stormis-pedestal-img" loading="lazy" width="600" height="450">
       </div>
 
-      <div class="stormis-about-dark__image-wrap">
-        <img src="{{ 'stormis-brand-story.jpg' | asset_url }}" alt="Stormi's Godis Handcrafted Sweets" class="stormis-about-dark__img" loading="lazy" width="650" height="500">
+      <!-- Story Copy -->
+      <div>
+        <div class="stormis-gold-divider" style="justify-content: flex-start;">
+          <span>~ ABOUT <span class="stormis-script" style="font-size: 28px;">Stormi’s Godis</span> ~</span>
+        </div>
+        <h2 class="stormis-about-dark__title">
+          Where Swedish Sweet Tradition Meets Modern Luxury
+        </h2>
+        <p class="stormis-about-dark__p">
+          In Sweden, <em>lördagsgodis</em> (Saturday sweets) and the ritual of <em>fika</em> are sacred celebrations of mindful indulgence. Born from a profound passion for artisan confectionery, Stormi’s Godis redefines traditional confectionery into an elevated sensory journey.
+        </p>
+        <p class="stormis-about-dark__p">
+          We kettle-cook in limited small batches using wild hand-harvested Scandinavian lingonberries, cloudberries, real fruit pectins, and single-origin dark chocolate. Gelatin-free, free of artificial dyes, and designed for unforgettable gifting.
+        </p>
+        <div class="stormis-about-dark__quote">
+          “True sweetness is not loud — it is nuanced, elegant, and crafted with reverence for natural Nordic ingredients.”
+        </div>
+        <a href="/pages/about-us" class="stormis-gold-btn">
+          Read Our Full Story
+        </a>
       </div>
     </div>
   </div>
@@ -108,11 +108,11 @@
 
 {% schema %}
 {
-  "name": "Stormis Dark About",
+  "name": "Stormis Light Story",
   "settings": [],
   "presets": [
     {
-      "name": "Stormis Dark About"
+      "name": "Stormis Light Story"
     }
   ]
 }

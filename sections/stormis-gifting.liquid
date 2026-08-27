@@ -1,15 +1,15 @@
 <style>
   .stormis-gifting-dark {
-    padding: 110px 0;
-    background-color: #161210;
-    border-top: 1px solid #28201B;
-    border-bottom: 1px solid #28201B;
+    padding: 100px 0;
+    background-color: #FAF7F2;
+    border-top: 1px solid #E8E1D9;
+    border-bottom: 1px solid #E8E1D9;
     width: 100%;
     box-sizing: border-box;
   }
   @media (max-width: 767px) {
     .stormis-gifting-dark {
-      padding: 65px 0;
+      padding: 60px 0;
     }
   }
   .stormis-gifting-dark__container {
@@ -18,106 +18,97 @@
     margin: 0 auto !important;
   }
   .stormis-gifting-dark__grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 70px !important;
-    align-items: center !important;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: center;
   }
   @media (max-width: 991px) {
     .stormis-gifting-dark__grid {
-      grid-template-columns: 1fr !important;
-      gap: 40px !important;
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
   }
-  .stormis-gifting-dark__image-wrap {
-    border-radius: 10px;
+  .stormis-gifting-img-wrap {
+    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #D4AF37;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    aspect-ratio: 4 / 3;
+    border: 1px solid #E8E1D9;
+    box-shadow: none !important;
   }
-  .stormis-gifting-dark__image {
+  .stormis-gifting-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.6s ease;
-  }
-  .stormis-gifting-dark__image-wrap:hover .stormis-gifting-dark__image {
-    transform: scale(1.04);
   }
   .stormis-gifting-dark__title {
     font-family: 'Cormorant Garamond', serif !important;
-    font-size: 46px !important;
+    font-size: 42px !important;
     line-height: 1.15 !important;
-    color: #FAF7F2 !important;
-    margin-bottom: 20px !important;
+    color: #110E0D !important;
+    margin-bottom: 18px !important;
     font-weight: 600 !important;
   }
   @media (max-width: 767px) {
     .stormis-gifting-dark__title {
-      font-size: 32px !important;
+      font-size: 28px !important;
     }
   }
-  .stormis-gifting-dark__desc {
-    font-size: 16px;
-    line-height: 1.75;
-    color: #D5CBC0;
-    margin-bottom: 30px;
-  }
-  .stormis-gifting-features-dark {
+  .stormis-gifting-features {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin-bottom: 34px;
+    margin: 24px 0 32px;
   }
-  .stormis-gifting-feat-dark-item {
+  .stormis-gift-item {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #FAF7F2;
+    font-size: 15px;
+    color: #110E0D;
   }
-  .stormis-gifting-feat-dark-item svg {
-    color: #E5A93C;
-    flex-shrink: 0;
+  .stormis-gift-item span {
+    color: #C98D28;
+    font-size: 18px;
   }
 </style>
 
 <section class="stormis-gifting-dark">
   <div class="stormis-gifting-dark__container">
     <div class="stormis-gifting-dark__grid">
-      <div class="stormis-gifting-dark__image-wrap">
-        <img src="{{ 'prod-giftbox-main.jpg' | asset_url }}" alt="Stormi's Godis Luxury Gift Box" class="stormis-gifting-dark__image" loading="lazy" width="600" height="500">
-      </div>
-
-      <div class="stormis-gifting-dark__content">
+      <!-- Gifting Story -->
+      <div>
         <div class="stormis-gold-divider" style="justify-content: flex-start;">
           <span>~ THE ART OF GIFTING ~</span>
         </div>
-        <h2 class="stormis-gifting-dark__title">Give Something Sweeter</h2>
-        <p class="stormis-gifting-dark__desc">
-          Whether celebrating milestones, delighting dinner hosts, or curating luxury corporate appreciation, our signature keepsake gift hampers turn sweet treats into unforgettable gestures.
+        <h2 class="stormis-gifting-dark__title">
+          Unboxing an Heirloom Sweet Experience
+        </h2>
+        <p style="color: #6E6259; font-size: 15px; line-height: 1.7; margin: 0;">
+          Every Stormi’s Godis box is handcrafted to evoke the tactile magic of receiving a luxury gift from Stockholm. From rigid keepsake boxes with gold debossed seals to silk-tied ribbons and complimentary handwritten personalized notes.
         </p>
 
-        <div class="stormis-gifting-features-dark">
-          <div class="stormis-gifting-feat-dark-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Signature rigid boxes with gold foil embossing & satin ribbons</span>
+        <div class="stormis-gifting-features">
+          <div class="stormis-gift-item">
+            <span>✓</span> Rigid matte keepsake gift case with gold foil debossing
           </div>
-          <div class="stormis-gifting-feat-dark-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Complimentary handwritten personalized gift note</span>
+          <div class="stormis-gift-item">
+            <span>✓</span> Complimentary personalized handwritten gift note
           </div>
-          <div class="stormis-gifting-feat-dark-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Direct doorstep delivery in protective temperature-safe packaging</span>
+          <div class="stormis-gift-item">
+            <span>✓</span> Temperature-safe insulated packaging for perfect delivery
           </div>
         </div>
 
         <a href="/collections/all" class="stormis-gold-btn">
-          Shop Gift Boxes
+          Explore Gift Boxes
         </a>
+      </div>
+
+      <!-- Gifting Image -->
+      <div class="stormis-gifting-img-wrap">
+        <img src="{{ 'stormis-lifestyle-banner.jpg' | asset_url }}" alt="Stormi’s Godis Luxury Gift Box" class="stormis-gifting-img" loading="lazy" width="600" height="450">
       </div>
     </div>
   </div>
@@ -125,11 +116,11 @@
 
 {% schema %}
 {
-  "name": "Stormis Dark Gifting",
+  "name": "Stormis Light Gifting",
   "settings": [],
   "presets": [
     {
-      "name": "Stormis Dark Gifting"
+      "name": "Stormis Light Gifting"
     }
   ]
 }

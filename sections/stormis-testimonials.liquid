@@ -1,9 +1,9 @@
 <style>
   .stormis-reviews-dark {
     padding: 100px 0;
-    background-color: #161210;
-    border-top: 1px solid #28201B;
-    border-bottom: 1px solid #28201B;
+    background-color: #F4EFEA;
+    border-top: 1px solid #E8E1D9;
+    border-bottom: 1px solid #E8E1D9;
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -28,7 +28,7 @@
     font-family: 'Cormorant Garamond', serif !important;
     font-size: 44px !important;
     line-height: 1.15 !important;
-    color: #FAF7F2 !important;
+    color: #110E0D !important;
     margin-bottom: 12px !important;
     font-weight: 600 !important;
   }
@@ -69,24 +69,28 @@
       min-width: 100%;
     }
   }
+
+  /* Flat Clean White Review Cards - NO SHADOW & NO HOVER LIFT */
   .stormis-review-dark-card {
-    background: #110E0D;
-    border-radius: 12px;
+    background: #FFFFFF;
+    border-radius: 8px;
     padding: 32px 26px;
-    border: 1px solid #382E29;
+    border: 1px solid #E8E1D9;
     display: flex;
     flex-direction: column;
     height: 100%;
     box-sizing: border-box;
-    box-shadow: 0 16px 36px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: border-color 0.25s ease;
+    box-shadow: none !important;
+    transform: none !important;
   }
   .stormis-review-dark-card:hover {
-    transform: translateY(-4px);
-    border-color: #D4AF37;
+    border-color: #C98D28 !important;
+    box-shadow: none !important;
+    transform: none !important;
   }
   .stormis-review-dark-card__stars {
-    color: #E5A93C;
+    color: #C98D28;
     font-size: 16px;
     letter-spacing: 2px;
     margin-bottom: 14px;
@@ -95,7 +99,7 @@
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 19px;
     line-height: 1.5;
-    color: #FAF7F2;
+    color: #110E0D;
     font-style: italic;
     margin-bottom: 20px;
     flex-grow: 1;
@@ -105,16 +109,16 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 14px;
-    border-top: 1px solid #28201B;
+    border-top: 1px solid #E8E1D9;
   }
   .stormis-review-dark-card__name {
     font-size: 14px;
-    font-weight: 600;
-    color: #E5A93C;
+    font-weight: 700;
+    color: #110E0D;
   }
   .stormis-review-dark-card__product {
     font-size: 12px;
-    color: #B8AEA3;
+    color: #6E6259;
   }
 
   /* Carousel Navigation Buttons & Dots */
@@ -129,20 +133,21 @@
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: #1A1513;
-    border: 1px solid #382E29;
-    color: #FAF7F2;
+    background: #FFFFFF;
+    border: 1px solid #E8E1D9;
+    color: #110E0D;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-size: 18px;
     transition: all 0.25s ease;
+    box-shadow: none !important;
   }
   .stormis-carousel-arrow:hover {
-    background: #E5A93C;
-    color: #110E0D;
-    border-color: #E5A93C;
+    background: #C98D28;
+    color: #FFFFFF;
+    border-color: #C98D28;
   }
   .stormis-carousel-dots {
     display: flex;
@@ -153,14 +158,14 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #382E29;
+    background: #D5CBC0;
     cursor: pointer;
     transition: all 0.3s;
   }
   .stormis-carousel-dot.is-active {
     width: 24px;
     border-radius: 6px;
-    background: #E5A93C;
+    background: #C98D28;
   }
 </style>
 
@@ -171,7 +176,7 @@
         <span>~ VERIFIED REVIEWS ~</span>
       </div>
       <h2 class="stormis-reviews-dark__title">Loved by Sweet-Tooths Everywhere</h2>
-      <p style="color: #D5CBC0; font-size: 15px;">Discover what our confectionery connoisseurs say about Stormi’s Godis.</p>
+      <p style="color: #6E6259; font-size: 14px;">Discover what our confectionery connoisseurs say about Stormi’s Godis.</p>
     </div>
 
     <div class="stormis-reviews-carousel-wrap">
@@ -252,9 +257,7 @@
       <!-- Controls -->
       <div class="stormis-carousel-nav">
         <button type="button" class="stormis-carousel-arrow" onclick="moveReviewsCarousel(-1)" aria-label="Previous Review">←</button>
-        <div class="stormis-carousel-dots" id="stormisCarouselDots">
-          <!-- Dots rendered via JS -->
-        </div>
+        <div class="stormis-carousel-dots" id="stormisCarouselDots"></div>
         <button type="button" class="stormis-carousel-arrow" onclick="moveReviewsCarousel(1)" aria-label="Next Review">→</button>
       </div>
     </div>
@@ -321,11 +324,11 @@
 
 {% schema %}
 {
-  "name": "Stormis Reviews Carousel",
+  "name": "Stormis Light Reviews",
   "settings": [],
   "presets": [
     {
-      "name": "Stormis Reviews Carousel"
+      "name": "Stormis Light Reviews"
     }
   ]
 }

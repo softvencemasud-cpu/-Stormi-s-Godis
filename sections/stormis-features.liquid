@@ -1,7 +1,7 @@
 <style>
   .stormis-features-dark {
     padding: 100px 0;
-    background-color: #110E0D;
+    background-color: #FAF7F2;
     width: 100%;
     box-sizing: border-box;
   }
@@ -24,7 +24,7 @@
     font-family: 'Cormorant Garamond', serif !important;
     font-size: 44px !important;
     line-height: 1.15 !important;
-    color: #FAF7F2 !important;
+    color: #110E0D !important;
     margin-bottom: 14px !important;
     font-weight: 600 !important;
   }
@@ -51,16 +51,20 @@
       gap: 10px !important;
     }
   }
+
+  /* Flat Clean White Benefit Cards - NO SHADOW & NO HOVER LIFT */
   .stormis-feat-dark-card {
-    background: #1A1513;
+    background: #FFFFFF;
     border-radius: 8px;
     padding: 30px 20px;
-    border: 1px solid #382E29;
+    border: 1px solid #E8E1D9;
     text-align: center;
-    transition: all 0.35s ease;
+    transition: border-color 0.25s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: none !important;
+    transform: none !important;
   }
   @media (max-width: 640px) {
     .stormis-feat-dark-card {
@@ -68,22 +72,22 @@
     }
   }
   .stormis-feat-dark-card:hover {
-    transform: translateY(-4px);
-    border-color: #D4AF37;
-    box-shadow: 0 14px 35px rgba(0,0,0,0.5);
+    border-color: #C98D28 !important;
+    box-shadow: none !important;
+    transform: none !important;
   }
   .stormis-feat-dark-card__icon {
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: #241E1A;
-    border: 1px solid #382E29;
+    background: #FAF7F2;
+    border: 1px solid #E8E1D9;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 16px;
-    color: #E5A93C;
-    transition: all 0.3s ease;
+    color: #C98D28;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
   @media (max-width: 640px) {
     .stormis-feat-dark-card__icon {
@@ -93,15 +97,14 @@
     }
   }
   .stormis-feat-dark-card:hover .stormis-feat-dark-card__icon {
-    background: #E5A93C;
-    color: #110E0D;
-    border-color: #E5A93C;
-    transform: scale(1.1);
+    background: #C98D28;
+    color: #FFFFFF;
+    border-color: #C98D28;
   }
   .stormis-feat-dark-card__title {
     font-family: 'Cormorant Garamond', serif !important;
     font-size: 22px !important;
-    color: #FAF7F2 !important;
+    color: #110E0D !important;
     margin-bottom: 8px !important;
     font-weight: 600 !important;
   }
@@ -113,7 +116,7 @@
   }
   .stormis-feat-dark-card__desc {
     font-size: 13px;
-    color: #D5CBC0;
+    color: #6E6259;
     line-height: 1.5;
     margin: 0;
   }
@@ -132,7 +135,7 @@
         <span>~ WHY STORMI’S GODIS ~</span>
       </div>
       <h2 class="stormis-features-dark__title">Confectionery as an Art Form</h2>
-      <p style="color: #D5CBC0; font-size: 14px;">Every detail is thoughtfully curated from kettle cooking to presentation.</p>
+      <p style="color: #6E6259; font-size: 14px;">Every detail is thoughtfully curated from kettle cooking to presentation.</p>
     </div>
 
     <div class="stormis-features-dark__grid">
@@ -177,11 +180,11 @@
 
 {% schema %}
 {
-  "name": "Stormis Dark Features",
+  "name": "Stormis Light Features",
   "settings": [],
   "presets": [
     {
-      "name": "Stormis Dark Features"
+      "name": "Stormis Light Features"
     }
   ]
 }

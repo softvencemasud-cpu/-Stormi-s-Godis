@@ -1,137 +1,121 @@
 <style>
-  .stormis-sweet-club-dark {
-    padding: 110px 0;
-    background-color: #110E0D;
+  .stormis-newsletter-dark {
+    padding: 100px 0;
+    background-color: #FFFFFF;
+    border-top: 1px solid #E8E1D9;
     text-align: center;
-    border-top: 1px solid #28201B;
+    width: 100%;
+    box-sizing: border-box;
   }
   @media (max-width: 767px) {
-    .stormis-sweet-club-dark {
-      padding: 65px 0;
+    .stormis-newsletter-dark {
+      padding: 60px 0;
     }
   }
-  .stormis-sweet-club-dark__container {
+  .stormis-newsletter-dark__container {
     width: 92% !important;
-    max-width: 1440px !important;
+    max-width: 650px !important;
     margin: 0 auto !important;
   }
-  .stormis-sweet-club-dark__inner {
-    max-width: 680px;
-    margin: 0 auto;
-  }
-  .stormis-sweet-club-dark__title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 46px;
-    line-height: 1.15;
-    color: #FAF7F2;
-    margin-bottom: 16px;
-    font-weight: 600;
+  .stormis-newsletter-dark__title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 42px !important;
+    line-height: 1.15 !important;
+    color: #110E0D !important;
+    margin-bottom: 12px !important;
+    font-weight: 600 !important;
   }
   @media (max-width: 767px) {
-    .stormis-sweet-club-dark__title {
-      font-size: 34px;
+    .stormis-newsletter-dark__title {
+      font-size: 28px !important;
     }
   }
-  .stormis-sweet-club-dark__desc {
-    font-size: 16px;
-    color: #D5CBC0;
-    line-height: 1.65;
-    margin-bottom: 36px;
+  .stormis-newsletter-dark__desc {
+    font-size: 15px;
+    color: #6E6259;
+    line-height: 1.6;
+    margin-bottom: 30px;
   }
-  .stormis-sweet-club-dark__form {
+  .stormis-newsletter-dark__form {
     display: flex;
-    max-width: 540px;
-    margin: 0 auto 18px;
-    background: #1A1513;
-    border: 1px solid #4A3E37;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid #E8E1D9;
     border-radius: 4px;
-    padding: 6px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    overflow: hidden;
+    box-shadow: none !important;
   }
-  @media (max-width: 480px) {
-    .stormis-sweet-club-dark__form {
+  @media (max-width: 580px) {
+    .stormis-newsletter-dark__form {
       flex-direction: column;
-      padding: 12px;
+      border: none;
+      background: transparent;
       gap: 10px;
     }
   }
-  .stormis-sweet-club-dark__input {
+  .stormis-newsletter-dark__input {
     flex-grow: 1;
-    border: none;
     background: transparent;
-    font-size: 15px;
-    color: #FAF7F2;
-    outline: none;
-    padding: 12px 18px;
-  }
-  .stormis-sweet-club-dark__input::placeholder {
-    color: #8C8075;
-  }
-  .stormis-sweet-club-dark__btn {
-    padding: 14px 34px;
-    background: #E5A93C;
-    color: #110E0D;
     border: none;
-    border-radius: 4px;
+    padding: 16px 20px;
+    color: #110E0D;
+    font-size: 14px;
+    outline: none;
+  }
+  @media (max-width: 580px) {
+    .stormis-newsletter-dark__input {
+      background: #FFFFFF;
+      border: 1px solid #E8E1D9;
+      border-radius: 4px;
+    }
+  }
+  .stormis-newsletter-dark__btn {
+    background: #C98D28;
+    color: #FFFFFF;
+    border: none;
+    padding: 16px 28px;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background 0.25s ease;
+    box-shadow: none !important;
   }
-  .stormis-sweet-club-dark__btn:hover {
-    background: #F4C468;
-    box-shadow: 0 4px 16px rgba(229, 169, 60, 0.4);
+  .stormis-newsletter-dark__btn:hover {
+    background: #B37A1D;
   }
 </style>
 
-<section class="stormis-sweet-club-dark">
-  <div class="stormis-sweet-club-dark__container">
-    <div class="stormis-sweet-club-dark__inner">
-      <div class="stormis-gold-divider">
-        <span>~ THE SWEET CLUB ~</span>
-      </div>
-      <h2 class="stormis-sweet-club-dark__title">A Little More Sweetness in Your Inbox</h2>
-      <p class="stormis-sweet-club-dark__desc">
-        Get first access to new seasonal collections, secret reserve batches, and gifting invitations. <strong>Enjoy 10% off your first artisan order.</strong>
-      </p>
-
-      {% form 'customer', class: 'stormis-sweet-club-dark__form-wrap' %}
-        {% if form.posted_successfully? %}
-          <div style="background:#1A2E20; color:#85E39E; padding:14px 22px; border-radius:4px; margin-bottom:16px; font-weight:500; border:1px solid #2A4E32;">
-            Thank you for joining the Sweet Club! Check your inbox for your 10% welcome gift.
-          </div>
-        {% else %}
-          <div class="stormis-sweet-club-dark__form">
-            <input type="hidden" name="contact[tags]" value="newsletter,sweet_club">
-            <input
-              type="email"
-              name="contact[email]"
-              id="SweetClubEmail"
-              class="stormis-sweet-club-dark__input"
-              placeholder="Enter your email address"
-              required
-              aria-label="Email address"
-            >
-            <button type="submit" class="stormis-sweet-club-dark__btn">
-              Subscribe
-            </button>
-          </div>
-        {% endif %}
-      {% endform %}
-      <p style="font-size: 13px; color: #8C8075;">We respect your privacy. Unsubscribe at any time with one click.</p>
+<section class="stormis-newsletter-dark">
+  <div class="stormis-newsletter-dark__container">
+    <div class="stormis-gold-divider">
+      <span>~ JOIN THE SWEET CLUB ~</span>
     </div>
+    <h2 class="stormis-newsletter-dark__title">
+      Unlock Secret Drops & 10% Off
+    </h2>
+    <p class="stormis-newsletter-dark__desc">
+      Subscribe to receive exclusive access to small-batch seasonal releases, private tasting invitations, and 10% off your first order.
+    </p>
+
+    <form class="stormis-newsletter-dark__form" onsubmit="event.preventDefault(); alert('Tack så mycket! You have joined The Sweet Club. Check your email for your 10% welcome code.');">
+      <input type="email" class="stormis-newsletter-dark__input" placeholder="Enter your email address..." required>
+      <button type="submit" class="stormis-newsletter-dark__btn">
+        Join The Club
+      </button>
+    </form>
   </div>
 </section>
 
 {% schema %}
 {
-  "name": "Stormis Dark Sweet Club",
+  "name": "Stormis Light Sweet Club",
   "settings": [],
   "presets": [
     {
-      "name": "Stormis Dark Sweet Club"
+      "name": "Stormis Light Sweet Club"
     }
   ]
 }

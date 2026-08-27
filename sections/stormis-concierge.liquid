@@ -1,7 +1,9 @@
 <style>
   .stormis-concierge-dark {
     padding: 100px 0;
-    background-color: #110E0D;
+    background-color: #FFFFFF;
+    border-top: 1px solid #E8E1D9;
+    border-bottom: 1px solid #E8E1D9;
     width: 100%;
     box-sizing: border-box;
   }
@@ -14,191 +16,137 @@
     width: 92% !important;
     max-width: 1440px !important;
     margin: 0 auto !important;
-    padding: 0 !important;
   }
-  .stormis-concierge-dark__header {
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto 50px;
-  }
-  .stormis-concierge-dark__title {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-size: 44px !important;
-    line-height: 1.15 !important;
-    color: #FAF7F2 !important;
-    margin-bottom: 12px !important;
-    font-weight: 600 !important;
-  }
-  .stormis-concierge-grid {
-    display: grid !important;
-    grid-template-columns: 1.3fr 0.9fr !important;
-    gap: 50px !important;
-    align-items: center !important;
-    width: 100% !important;
+  .stormis-concierge-dark__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 60px;
+    align-items: center;
   }
   @media (max-width: 991px) {
-    .stormis-concierge-grid {
-      grid-template-columns: 1fr !important;
-      gap: 36px !important;
+    .stormis-concierge-dark__grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
-  }
-  .stormis-form-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 18px !important;
-    width: 100% !important;
-  }
-  @media (max-width: 580px) {
-    .stormis-form-grid {
-      grid-template-columns: 1fr !important;
-      gap: 14px !important;
-    }
-  }
-  .stormis-form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .stormis-form-group label {
-    font-size: 13px;
-    font-weight: 600;
-    color: #FAF7F2;
-    letter-spacing: 0.04em;
-  }
-  .stormis-form-input {
-    background: #1A1513 !important;
-    border: 1px solid #4A3E37 !important;
-    border-radius: 4px !important;
-    padding: 13px 16px !important;
-    color: #FAF7F2 !important;
-    font-size: 14px !important;
-    outline: none !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    transition: border-color 0.2s, box-shadow 0.2s !important;
-  }
-  .stormis-form-input:focus {
-    border-color: #E5A93C !important;
-    box-shadow: 0 0 0 2px rgba(229, 169, 60, 0.2) !important;
-  }
-  .stormis-form-input::placeholder {
-    color: #8C8075 !important;
-  }
-  .stormis-form-submit {
-    grid-column: 1 / -1;
-    margin-top: 8px;
   }
   .stormis-concierge-card {
-    background: #1A1513;
-    border: 1px solid #382E29;
-    border-radius: 8px;
-    padding: 34px 28px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.6);
-    box-sizing: border-box;
-    width: 100%;
+    background: #FAF7F2;
+    border-radius: 12px;
+    padding: 40px 36px;
+    border: 1px solid #E8E1D9;
+    box-shadow: none !important;
   }
-  .stormis-concierge-card__img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid #D4AF37;
-    margin-bottom: 22px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  @media (max-width: 767px) {
+    .stormis-concierge-card {
+      padding: 24px 18px;
+    }
   }
   .stormis-concierge-card__title {
     font-family: 'Cormorant Garamond', serif !important;
-    font-size: 26px !important;
-    color: #E5A93C !important;
-    margin-bottom: 10px !important;
+    font-size: 34px !important;
+    color: #110E0D !important;
+    margin: 0 0 10px !important;
     font-weight: 600 !important;
   }
-  .stormis-concierge-card__desc {
+  .stormis-form-group {
+    margin-bottom: 16px;
+  }
+  .stormis-form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #110E0D;
+    margin-bottom: 6px;
+  }
+  .stormis-form-input, .stormis-form-select, .stormis-form-textarea {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E8E1D9;
+    border-radius: 4px;
+    padding: 12px 14px;
+    color: #110E0D;
     font-size: 14px;
-    color: #D5CBC0;
-    line-height: 1.6;
-    margin-bottom: 22px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+  }
+  .stormis-form-input:focus, .stormis-form-select:focus, .stormis-form-textarea:focus {
+    border-color: #C98D28;
+  }
+  .stormis-dessert-card {
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    position: relative;
+    border: 1px solid #E8E1D9;
+    box-shadow: none !important;
+  }
+  .stormis-dessert-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 </style>
 
-<section id="stormisConcierge" class="stormis-concierge-dark">
+<section class="stormis-concierge-dark">
   <div class="stormis-concierge-dark__container">
-    <div class="stormis-concierge-dark__header">
-      <div class="stormis-gold-divider">
-        <span>~ BOOK / RESERVE NOW ~</span>
-      </div>
-      <h2 class="stormis-concierge-dark__title">
-        Custom Gifting & Event Concierge
-      </h2>
-      <p style="color: #D5CBC0; font-size: 15px;">
-        Reserve your custom bespoke hampers, wedding candy tables, or corporate gift boxes.
-      </p>
-    </div>
+    <div class="stormis-concierge-dark__grid">
+      <!-- Concierge Form -->
+      <div class="stormis-concierge-card">
+        <div class="stormis-gold-divider" style="justify-content: flex-start;">
+          <span>~ BESPOKE GIFTING ~</span>
+        </div>
+        <h2 class="stormis-concierge-card__title">
+          Custom Gifting & Event Concierge
+        </h2>
+        <p style="color: #6E6259; font-size: 14px; margin-bottom: 24px; line-height: 1.6;">
+          Planning a luxury corporate hamper, private tasting, wedding celebration, or bespoke confectionery box? Our Stockholm atelier team will curate a tailored proposal for you.
+        </p>
 
-    <div class="stormis-concierge-grid">
-      <div>
-        <form class="stormis-form-grid" onsubmit="event.preventDefault(); alert('Thank you! Your concierge reservation request has been received. Our atelier team will contact you shortly.');">
+        <form onsubmit="event.preventDefault(); alert('Tack så mycket! Your concierge inquiry has been received. Our team will contact you within 24 hours.');">
           <div class="stormis-form-group">
-            <label>Your full name ?</label>
-            <input type="text" class="stormis-form-input" placeholder="Write your name here..." required>
+            <label class="stormis-form-label">Your Name</label>
+            <input type="text" class="stormis-form-input" placeholder="Full name" required>
           </div>
-
           <div class="stormis-form-group">
-            <label>Your email address ?</label>
-            <input type="email" class="stormis-form-input" placeholder="Write your email here..." required>
+            <label class="stormis-form-label">Email Address</label>
+            <input type="email" class="stormis-form-input" placeholder="your.email@domain.com" required>
           </div>
-
           <div class="stormis-form-group">
-            <label>How many gift boxes / guests ?</label>
-            <select class="stormis-form-input">
-              <option value="1-5">1 - 5 Boxes</option>
-              <option value="10-25">10 - 25 Boxes</option>
-              <option value="50+">50+ Corporate / Event</option>
-              <option value="wedding">Wedding Sweets Table</option>
+            <label class="stormis-form-label">Occasion / Service Type</label>
+            <select class="stormis-form-select">
+              <option>Corporate Gifting & Hampers</option>
+              <option>Wedding Favors & Table Display</option>
+              <option>Private Stockholm Tasting</option>
+              <option>Custom Ribbon & Gold Embossing</option>
             </select>
           </div>
-
           <div class="stormis-form-group">
-            <label>Preferred Delivery Time / Date ?</label>
-            <input type="text" class="stormis-form-input" placeholder="e.g. Next Friday morning">
+            <label class="stormis-form-label">Message / Details</label>
+            <textarea class="stormis-form-textarea" rows="3" placeholder="Tell us about your event, quantity, or gifting vision..."></textarea>
           </div>
-
-          <div class="stormis-form-group">
-            <label>Select Preferred Collection ?</label>
-            <select class="stormis-form-input">
-              <option value="all">Custom Assorted Mix</option>
-              <option value="berry">Swedish Berry Collection</option>
-              <option value="chocolate">Nordic Chocolate Selection</option>
-              <option value="giftbox">Deluxe Gift Hamper</option>
-            </select>
-          </div>
-
-          <div class="stormis-form-group">
-            <label>Your phone number ?</label>
-            <input type="tel" class="stormis-form-input" placeholder="Write your number here..." required>
-          </div>
-
-          <div class="stormis-form-submit">
-            <button type="submit" class="stormis-gold-btn" style="width: 100%; border-radius: 4px; padding: 16px;">
-              Submit Reservation
-            </button>
-          </div>
+          <button type="submit" class="stormis-gold-btn" style="width: 100%; border-radius: 4px; padding: 14px 20px;">
+            Request Concierge Proposal
+          </button>
         </form>
       </div>
 
-      <div class="stormis-concierge-card">
-        <img src="{{ 'prod-choco-lifestyle.jpg' | asset_url }}" alt="Enjoy Our Best Sweets" class="stormis-concierge-card__img">
-        <h3 class="stormis-concierge-card__title">Enjoy Our Best Sweets</h3>
-        <p class="stormis-concierge-card__desc">
-          Handcrafted in Stockholm with glazed ceramic presentation, pure berry purees, and single-estate cocoa. The ultimate experience in Scandinavian sweetness.
-        </p>
-        <a href="/pages/contact" class="stormis-outline-btn" style="width: 100%; text-align: center; box-sizing: border-box;">
-          Contact Us Directly
-        </a>
+      <!-- Plated Dessert / Atelier Display -->
+      <div>
+        <div class="stormis-dessert-card">
+          <img src="{{ 'prod-choco-lifestyle.jpg' | asset_url }}" alt="Stormi’s Godis Plated Confectionery" class="stormis-dessert-img" loading="lazy" width="600" height="450">
+        </div>
+        <div style="margin-top: 24px;">
+          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #110E0D; margin-bottom: 8px;">
+            Handmade with Nordic Care
+          </h3>
+          <p style="color: #6E6259; font-size: 14px; line-height: 1.7; margin: 0;">
+            From custom gold-stamped ribbons to bespoke ingredient pairings, every order is treated as a piece of edible art, dispatched in climate-insulated luxury boxes.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -206,11 +154,11 @@
 
 {% schema %}
 {
-  "name": "Stormis Concierge",
+  "name": "Stormis Light Concierge",
   "settings": [],
   "presets": [
     {
-      "name": "Stormis Concierge"
+      "name": "Stormis Light Concierge"
     }
   ]
 }

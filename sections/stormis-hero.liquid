@@ -4,8 +4,8 @@
     min-height: 88vh;
     display: flex;
     align-items: center;
-    background-color: #110E0D;
-    background-image: linear-gradient(to right, rgba(17, 14, 13, 0.96) 0%, rgba(17, 14, 13, 0.8) 45%, rgba(17, 14, 13, 0.3) 100%), url("{{ 'stormis-hero-banner.jpg' | asset_url }}");
+    background-color: #FAF7F2;
+    background-image: linear-gradient(to right, rgba(250, 247, 242, 0.97) 0%, rgba(250, 247, 242, 0.88) 50%, rgba(250, 247, 242, 0.4) 100%), url("{{ 'stormis-hero-banner.jpg' | asset_url }}");
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@
   @media (max-width: 991px) {
     .stormis-hero-dark {
       min-height: 75vh;
-      background-image: linear-gradient(to bottom, rgba(17, 14, 13, 0.95) 0%, rgba(17, 14, 13, 0.85) 60%, rgba(17, 14, 13, 0.5) 100%), url("{{ 'stormis-hero-banner.jpg' | asset_url }}");
+      background-image: linear-gradient(to bottom, rgba(250, 247, 242, 0.96) 0%, rgba(250, 247, 242, 0.9) 60%, rgba(250, 247, 242, 0.6) 100%), url("{{ 'stormis-hero-banner.jpg' | asset_url }}");
       background-position: center;
       padding: 70px 0;
     }
@@ -32,26 +32,25 @@
   }
   .stormis-hero-dark__eyebrow {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #FAF7F2;
+    color: #6E6259;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
   }
   .stormis-hero-dark__eyebrow span {
-    color: #E5A93C;
+    color: #C98D28;
   }
   .stormis-hero-dark__brand {
     font-family: 'Great Vibes', cursive;
     font-size: 78px;
     line-height: 1.1;
-    color: #FAF7F2;
+    color: #110E0D;
     margin-bottom: 16px;
     display: block;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
   }
   @media (max-width: 767px) {
     .stormis-hero-dark__brand {
@@ -62,7 +61,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 48px;
     line-height: 1.15;
-    color: #FAF7F2;
+    color: #110E0D;
     margin-bottom: 22px;
     font-weight: 600;
   }
@@ -72,12 +71,12 @@
     }
   }
   .stormis-hero-dark__title span {
-    color: #E5A93C;
+    color: #C98D28;
   }
   .stormis-hero-dark__desc {
     font-size: 16px;
     line-height: 1.7;
-    color: #D5CBC0;
+    color: #6E6259;
     margin-bottom: 40px;
   }
   @media (max-width: 767px) {
@@ -104,16 +103,16 @@
     align-items: center;
     justify-content: center;
     padding: 16px 38px;
-    background-color: #E5A93C;
-    color: #110E0D !important;
+    background-color: #C98D28;
+    color: #FFFFFF !important;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     border-radius: 4px;
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 6px 20px rgba(229, 169, 60, 0.3);
+    transition: background-color 0.25s ease;
+    box-shadow: none !important;
   }
   @media (max-width: 640px) {
     .stormis-gold-btn {
@@ -124,9 +123,9 @@
     }
   }
   .stormis-gold-btn:hover {
-    background-color: #F4C468;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(229, 169, 60, 0.45);
+    background-color: #B37A1D;
+    transform: none !important;
+    box-shadow: none !important;
   }
   .stormis-outline-btn {
     display: inline-flex;
@@ -134,15 +133,16 @@
     justify-content: center;
     padding: 15px 34px;
     background: transparent;
-    color: #FAF7F2 !important;
-    border: 1px solid #4A3E37;
+    color: #110E0D !important;
+    border: 1px solid #110E0D;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     border-radius: 4px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
+    box-shadow: none !important;
   }
   @media (max-width: 640px) {
     .stormis-outline-btn {
@@ -153,9 +153,11 @@
     }
   }
   .stormis-outline-btn:hover {
-    border-color: #E5A93C;
-    color: #E5A93C !important;
-    background: rgba(229, 169, 60, 0.05);
+    border-color: #C98D28;
+    color: #C98D28 !important;
+    background: rgba(201, 141, 40, 0.06);
+    transform: none !important;
+    box-shadow: none !important;
   }
 </style>
 
@@ -186,11 +188,11 @@
 
 {% schema %}
 {
-  "name": "Stormis Dark Hero",
+  "name": "Stormis Light Hero",
   "settings": [],
   "presets": [
     {
-      "name": "Stormis Dark Hero"
+      "name": "Stormis Light Hero"
     }
   ]
 }

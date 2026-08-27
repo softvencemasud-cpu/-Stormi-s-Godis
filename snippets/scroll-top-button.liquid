@@ -1,22 +1,55 @@
 {% if settings.show_scroll_top_button %}
   {% style %}
-    .m-button--scroll-top {
-      position: fixed;
-      right: 16px;
-      bottom: 86px;
-      z-index: 69;
-      border-radius: 50%;
-      padding: 0;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 46px;
-      height: 46px;
+    .m-button--scroll-top,
+    #scroll-to-top-button {
+      position: fixed !important;
+      right: 20px !important;
+      bottom: 80px !important;
+      z-index: 99999 !important;
+      border-radius: 50% !important;
+      padding: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 48px !important;
+      height: 48px !important;
+      min-width: 48px !important;
+      min-height: 48px !important;
+      max-width: 48px !important;
+      max-height: 48px !important;
+      background-color: #E5A93C !important;
+      color: #110E0D !important;
+      border: 1px solid #D4AF37 !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 12px rgba(229, 169, 60, 0.35) !important;
+      cursor: pointer !important;
       opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
 
-    .m-button--scroll-top.is-show {
-      opacity: 1;
+    .m-button--scroll-top.is-show,
+    #scroll-to-top-button.is-show {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+    }
+
+    .m-button--scroll-top:hover,
+    #scroll-to-top-button:hover {
+      background-color: #F4C468 !important;
+      transform: translateY(-4px) !important;
+      box-shadow: 0 10px 25px rgba(229, 169, 60, 0.55) !important;
+    }
+
+    #scroll-to-top-button svg {
+      width: 18px !important;
+      height: 18px !important;
+      fill: #110E0D !important;
+      stroke: #110E0D !important;
+      color: #110E0D !important;
+      display: block !important;
+      margin: 0 !important;
     }
 
     .m-scroll-top-target {
@@ -25,14 +58,22 @@
       visibility: hidden;
       opacity: 0;
     }
+
     @media (max-width: 767px) {
-      .m-button--scroll-top {
-        width: 40px;
-        height: 40px;
+      .m-button--scroll-top,
+      #scroll-to-top-button {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        min-height: 42px !important;
+        max-width: 42px !important;
+        max-height: 42px !important;
+        right: 16px !important;
+        bottom: 70px !important;
       }
-      .m-button--scroll-top svg {
-        width: 14px;
-        height: 14px;
+      #scroll-to-top-button svg {
+        width: 15px !important;
+        height: 15px !important;
       }
     }
   {% endstyle %}
@@ -41,17 +82,19 @@
 {% if settings.show_scroll_top_button %}
   <button
     id="scroll-to-top-button"
-    class="m-button m-button--primary m-button--scroll-top"
+    class="m-button m-button--scroll-top"
     aria-label="Scroll to Top"
   >
     <svg
-      class="m-svg-icon m-svg-icon--medium"
-      fill="currentColor"
-      stroke="currentColor"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 448 512"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     >
-      <path d="M4.465 263.536l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L207 92.113V468c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V92.113l178.494 178.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.05c-4.686-4.686-12.284-4.686-16.971 0L4.465 246.566c-4.687 4.686-4.687 12.284 0 16.97z"/>
+      <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
 {% endif %}

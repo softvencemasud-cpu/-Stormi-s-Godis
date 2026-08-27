@@ -150,8 +150,10 @@
     color: #E5A93C !important;
   }
 
-  /* Gold Buttons */
-  .m-button--primary, .sf__btn-primary, .stormis-gold-btn {
+  /* Gold Standard Primary Buttons */
+  .m-button--primary:not(.m-button--scroll-top):not(#scroll-to-top-button),
+  .sf__btn-primary:not(.m-button--scroll-top):not(#scroll-to-top-button),
+  .stormis-gold-btn {
     background-color: #E5A93C !important;
     color: #110E0D !important;
     border-radius: 4px !important;
@@ -164,11 +166,50 @@
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
     box-shadow: 0 4px 16px rgba(229, 169, 60, 0.25) !important;
   }
-  .m-button--primary:hover, .sf__btn-primary:hover, .stormis-gold-btn:hover {
+  .m-button--primary:not(.m-button--scroll-top):not(#scroll-to-top-button):hover,
+  .sf__btn-primary:not(.m-button--scroll-top):not(#scroll-to-top-button):hover,
+  .stormis-gold-btn:hover {
     background-color: #F4C468 !important;
     color: #110E0D !important;
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(229, 169, 60, 0.4) !important;
+  }
+
+  /* Circular Scroll-to-Top Button */
+  #scroll-to-top-button,
+  .m-button--scroll-top {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    background-color: #E5A93C !important;
+    color: #110E0D !important;
+    border: 1px solid #D4AF37 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 12px rgba(229, 169, 60, 0.35) !important;
+  }
+  #scroll-to-top-button:hover,
+  .m-button--scroll-top:hover {
+    background-color: #F4C468 !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 10px 25px rgba(229, 169, 60, 0.55) !important;
+  }
+  #scroll-to-top-button svg,
+  .m-button--scroll-top svg {
+    width: 18px !important;
+    height: 18px !important;
+    fill: none !important;
+    stroke: #110E0D !important;
+    color: #110E0D !important;
+    stroke-width: 2.5px !important;
+    display: block !important;
+    margin: 0 !important;
   }
 
   /* Single Product Page Dark Luxury Styling */

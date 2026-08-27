@@ -1,0 +1,71 @@
+{
+  "sections": {
+    "stormis_hero": {
+      "type": "stormis-hero",
+      "settings": {}
+    },
+    "stormis_trust": {
+      "type": "stormis-trust",
+      "settings": {}
+    },
+    "stormis_story": {
+      "type": "stormis-story",
+      "settings": {}
+    },
+    "stormis_products": {
+      "type": "stormis-products",
+      "settings": {}
+    },
+    "stormis_categories": {
+      "type": "stormis-categories",
+      "settings": {}
+    },
+    "stormis_statement": {
+      "type": "stormis-statement",
+      "settings": {}
+    },
+    "stormis_gallery": {
+      "type": "stormis-lifestyle-gallery",
+      "settings": {}
+    },
+    "stormis_concierge": {
+      "type": "stormis-concierge",
+      "settings": {}
+    },
+    "stormis_features": {
+      "type": "stormis-features",
+      "settings": {}
+    },
+    "stormis_ingredients": {
+      "type": "stormis-ingredient-story",
+      "settings": {}
+    },
+    "stormis_gifting": {
+      "type": "stormis-gifting",
+      "settings": {}
+    },
+    "stormis_testimonials": {
+      "type": "stormis-testimonials",
+      "settings": {}
+    },
+    "stormis_sweet_club": {
+      "type": "stormis-sweet-club",
+      "settings": {}
+    }
+  },
+  "order": [
+    "stormis_hero",
+    "stormis_trust",
+    "stormis_story",
+    "stormis_products",
+    "stormis_categories",
+    "stormis_statement",
+    "stormis_gallery",
+    "stormis_concierge",
+    "stormis_features",
+    "stormis_ingredients",
+    "stormis_gifting",
+    "stormis_testimonials",
+    "stormis_sweet_club"
+  ]
+}

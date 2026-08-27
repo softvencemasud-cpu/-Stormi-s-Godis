@@ -1,0 +1,315 @@
+<style>
+  .stormis-products-dark {
+    padding: 100px 0;
+    background-color: #110E0D;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  @media (max-width: 767px) {
+    .stormis-products-dark {
+      padding: 50px 0;
+    }
+  }
+  .stormis-products-dark__container {
+    width: 92% !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .stormis-products-dark__header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 40px;
+  }
+  .stormis-products-dark__title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 46px !important;
+    line-height: 1.15 !important;
+    color: #FAF7F2 !important;
+    margin-bottom: 14px !important;
+    font-weight: 600 !important;
+  }
+  @media (max-width: 767px) {
+    .stormis-products-dark__title {
+      font-size: 28px !important;
+    }
+  }
+
+  .stormis-products-dark__grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+  @media (max-width: 1024px) {
+    .stormis-products-dark__grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 16px !important;
+    }
+  }
+  @media (max-width: 640px) {
+    .stormis-products-dark__grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 10px !important;
+    }
+  }
+
+  .stormis-card-dark {
+    background: #1A1513;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #382E29;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    text-decoration: none;
+  }
+  .stormis-card-dark:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+    border-color: #D4AF37;
+  }
+  .stormis-card-dark__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #161210;
+  }
+  .stormis-card-dark__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.4s ease, transform 0.5s ease;
+  }
+  .stormis-card-dark__img--hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .stormis-card-dark:hover .stormis-card-dark__img--main {
+    opacity: 0;
+  }
+  .stormis-card-dark:hover .stormis-card-dark__img--hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  .stormis-card-dark__badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 3px 7px;
+    background: #E5A93C;
+    color: #110E0D;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    z-index: 3;
+  }
+  .stormis-card-dark__body {
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  @media (max-width: 640px) {
+    .stormis-card-dark__body {
+      padding: 12px 10px;
+    }
+  }
+  .stormis-card-dark__name {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+    color: #FAF7F2 !important;
+    margin-bottom: 6px !important;
+    font-weight: 600 !important;
+  }
+  @media (max-width: 640px) {
+    .stormis-card-dark__name {
+      font-size: 15px !important;
+      min-height: 36px;
+    }
+  }
+  .stormis-card-dark__desc {
+    font-size: 12px;
+    color: #D5CBC0;
+    line-height: 1.45;
+    margin-bottom: 12px;
+    flex-grow: 1;
+  }
+  @media (max-width: 640px) {
+    .stormis-card-dark__desc {
+      display: none;
+    }
+  }
+  .stormis-card-dark__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #2D2520;
+    margin-top: auto;
+  }
+  .stormis-card-dark__price {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #E5A93C;
+  }
+  .stormis-card-dark__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    background: #E5A93C;
+    color: #110E0D;
+    border: none;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+  .stormis-card-dark__btn:hover {
+    background: #F4C468;
+  }
+
+  /* Mobile Stacked Button and Price Layout */
+  @media (max-width: 640px) {
+    .stormis-card-dark__footer {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 6px !important;
+      padding-top: 8px !important;
+    }
+    .stormis-card-dark__price {
+      font-size: 15px !important;
+      text-align: left !important;
+    }
+    .stormis-card-dark__btn {
+      width: 100% !important;
+      box-sizing: border-box !important;
+      text-align: center !important;
+      padding: 8px 4px !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      border-radius: 4px !important;
+      display: block !important;
+    }
+  }
+</style>
+
+<section class="stormis-products-dark">
+  <div class="stormis-products-dark__container">
+    <div class="stormis-products-dark__header">
+      <div class="stormis-gold-divider">
+        <span>~ EXCLUSIVE <span class="stormis-script" style="font-size: 30px;">Menu</span> ~</span>
+      </div>
+      <h2 class="stormis-products-dark__title">
+        The Signature Swedish Collection
+      </h2>
+      <p style="color: #D5CBC0; font-size: 14px;">
+        Handcrafted artisan sweets presented in luxury packaging with rich flavors and authentic Scandinavian recipes.
+      </p>
+    </div>
+
+    <div class="stormis-products-dark__grid">
+      <!-- 1: Swedish Berry Collection -->
+      <a href="/products/swedish-berry-collection" class="stormis-card-dark">
+        <div class="stormis-card-dark__media">
+          <span class="stormis-card-dark__badge">Bestseller</span>
+          <img src="{{ 'prod-berry-main.jpg' | asset_url }}" alt="Swedish Berry Collection" class="stormis-card-dark__img stormis-card-dark__img--main" loading="lazy" width="400" height="400">
+          <img src="{{ 'prod-berry-lifestyle.jpg' | asset_url }}" alt="Swedish Berry Collection Lifestyle" class="stormis-card-dark__img stormis-card-dark__img--hover" loading="lazy" width="400" height="400">
+        </div>
+        <div class="stormis-card-dark__body">
+          <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
+          <h3 class="stormis-card-dark__name">Swedish Berry Collection</h3>
+          <p class="stormis-card-dark__desc">Wild lingonberry & raspberry artisan gummies dusted with natural sour sugar.</p>
+          <div class="stormis-card-dark__footer">
+            <span class="stormis-card-dark__price">$28.00</span>
+            <span class="stormis-card-dark__btn">View Details</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 2: Nordic Chocolate Selection -->
+      <a href="/products/luxury-chocolate-selection" class="stormis-card-dark">
+        <div class="stormis-card-dark__media">
+          <span class="stormis-card-dark__badge">Gold Reserve</span>
+          <img src="{{ 'prod-choco-main.jpg' | asset_url }}" alt="Nordic Chocolate Selection" class="stormis-card-dark__img stormis-card-dark__img--main" loading="lazy" width="400" height="400">
+          <img src="{{ 'prod-choco-lifestyle.jpg' | asset_url }}" alt="Nordic Chocolate Selection Lifestyle" class="stormis-card-dark__img stormis-card-dark__img--hover" loading="lazy" width="400" height="400">
+        </div>
+        <div class="stormis-card-dark__body">
+          <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
+          <h3 class="stormis-card-dark__name">Nordic Chocolate Selection</h3>
+          <p class="stormis-card-dark__desc">Single-origin dark chocolate pralines & cocoa truffles with sea salt & 24k gold.</p>
+          <div class="stormis-card-dark__footer">
+            <span class="stormis-card-dark__price">$36.00</span>
+            <span class="stormis-card-dark__btn">View Details</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 3: Scandinavian Candy Mix -->
+      <a href="/products/scandinavian-candy-mix" class="stormis-card-dark">
+        <div class="stormis-card-dark__media">
+          <span class="stormis-card-dark__badge">Artisan Mix</span>
+          <img src="{{ 'prod-mix-main.jpg' | asset_url }}" alt="Scandinavian Candy Mix" class="stormis-card-dark__img stormis-card-dark__img--main" loading="lazy" width="400" height="400">
+          <img src="{{ 'prod-mix-lifestyle.jpg' | asset_url }}" alt="Scandinavian Candy Mix Lifestyle" class="stormis-card-dark__img stormis-card-dark__img--hover" loading="lazy" width="400" height="400">
+        </div>
+        <div class="stormis-card-dark__body">
+          <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 4.9</div>
+          <h3 class="stormis-card-dark__name">Scandinavian Candy Mix</h3>
+          <p class="stormis-card-dark__desc">Sour raspberry skulls, sweet salmiak licorice diamonds, and fruit pastilles.</p>
+          <div class="stormis-card-dark__footer">
+            <span class="stormis-card-dark__price">$24.00</span>
+            <span class="stormis-card-dark__btn">View Details</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 4: Premium Swedish Gift Box -->
+      <a href="/products/premium-gift-candy-box" class="stormis-card-dark">
+        <div class="stormis-card-dark__media">
+          <span class="stormis-card-dark__badge">Grand Gift</span>
+          <img src="{{ 'prod-giftbox-main.jpg' | asset_url }}" alt="Premium Swedish Gift Box" class="stormis-card-dark__img stormis-card-dark__img--main" loading="lazy" width="400" height="400">
+          <img src="{{ 'stormis-lifestyle-banner.jpg' | asset_url }}" alt="Premium Swedish Gift Box Lifestyle" class="stormis-card-dark__img stormis-card-dark__img--hover" loading="lazy" width="400" height="400">
+        </div>
+        <div class="stormis-card-dark__body">
+          <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
+          <h3 class="stormis-card-dark__name">Premium Swedish Gift Box</h3>
+          <p class="stormis-card-dark__desc">Rigid keepsake gift hamper box with gold debossed emblem and full assortment.</p>
+          <div class="stormis-card-dark__footer">
+            <span class="stormis-card-dark__price">$65.00</span>
+            <span class="stormis-card-dark__btn">View Details</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Stormis Dark Products",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Stormis Dark Products"
+    }
+  ]
+}
+{% endschema %}

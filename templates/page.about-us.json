@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "about_main": {
+      "type": "stormis-about",
+      "settings": {}
+    },
+    "about_features": {
+      "type": "stormis-features",
+      "settings": {}
+    },
+    "about_newsletter": {
+      "type": "stormis-sweet-club",
+      "settings": {}
+    }
+  },
+  "order": [
+    "about_main",
+    "about_features",
+    "about_newsletter"
+  ]
+}

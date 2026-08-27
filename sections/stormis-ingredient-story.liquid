@@ -1,0 +1,146 @@
+<style>
+  .stormis-ingredients-dark {
+    padding: 110px 0;
+    background-color: #161210;
+    border-top: 1px solid #28201B;
+    border-bottom: 1px solid #28201B;
+  }
+  @media (max-width: 767px) {
+    .stormis-ingredients-dark {
+      padding: 65px 0;
+    }
+  }
+  .stormis-ingredients-dark__container {
+    width: 92% !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+  }
+  .stormis-ingredients-dark__grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 70px;
+    align-items: center;
+  }
+  @media (max-width: 991px) {
+    .stormis-ingredients-dark__grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+  .stormis-ingredients-dark__image-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #D4AF37;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+  }
+  .stormis-ingredients-dark__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .stormis-ingredients-dark__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    line-height: 1.15;
+    color: #FAF7F2;
+    margin-bottom: 22px;
+    font-weight: 600;
+  }
+  @media (max-width: 767px) {
+    .stormis-ingredients-dark__title {
+      font-size: 32px;
+    }
+  }
+  .stormis-ingredients-dark__desc {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #D5CBC0;
+    margin-bottom: 30px;
+  }
+  .stormis-dark-bullets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  @media (max-width: 480px) {
+    .stormis-dark-bullets {
+      grid-template-columns: 1fr;
+    }
+  }
+  .stormis-dark-bullet {
+    background: #110E0D;
+    border: 1px solid #382E29;
+    border-radius: 8px;
+    padding: 18px;
+  }
+  .stormis-dark-bullet h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #E5A93C;
+    margin: 0 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .stormis-dark-bullet p {
+    font-size: 12px;
+    color: #B8AEA3;
+    line-height: 1.45;
+    margin: 0;
+  }
+</style>
+
+<section class="stormis-ingredients-dark">
+  <div class="stormis-ingredients-dark__container">
+    <div class="stormis-ingredients-dark__grid">
+      <div class="stormis-ingredients-dark__content">
+        <div class="stormis-gold-divider" style="justify-content: flex-start;">
+          <span>~ THE DETAILS MATTER ~</span>
+        </div>
+        <h2 class="stormis-ingredients-dark__title">
+          Made to Taste as Beautiful as It Looks
+        </h2>
+        <p class="stormis-ingredients-dark__desc">
+          Every texture, aroma, and mouthfeel is engineered with deliberate care. From the gentle crunch of crystal sour sugar to the velvety melt of single-estate chocolate ganache, we elevate confectionery to an art form.
+        </p>
+
+        <div class="stormis-dark-bullets">
+          <div class="stormis-dark-bullet">
+            <h4><span>✦</span> Wild Berry Profiles</h4>
+            <p>Authentic lingonberry & forest raspberry extracts.</p>
+          </div>
+          <div class="stormis-dark-bullet">
+            <h4><span>✦</span> Rich Chocolate Notes</h4>
+            <p>Single-origin cocoa pralines with sea salt flakes.</p>
+          </div>
+          <div class="stormis-dark-bullet">
+            <h4><span>✦</span> Playful Textures</h4>
+            <p>Slowly kettle-cooked for the ideal artisan chew.</p>
+          </div>
+          <div class="stormis-dark-bullet">
+            <h4><span>✦</span> Balanced Sweetness</h4>
+            <p>Naturally sweetened with zero harsh artificial flavors.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stormis-ingredients-dark__image-wrap">
+        <img src="{{ 'prod-berry-macro.jpg' | asset_url }}" alt="Stormi's Godis Artisan Candy Texture" class="stormis-ingredients-dark__image" loading="lazy" width="600" height="480">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Stormis Dark Ingredients",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Stormis Dark Ingredients"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,141 @@
+<style>
+  .stormis-about-hero {
+    padding: 100px 0 60px;
+    background-color: #FAF7F2;
+    text-align: center;
+  }
+  .stormis-about-hero__title {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-size: 52px;
+    line-height: 1.15;
+    color: #1E1B18;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .stormis-about-hero__desc {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #5C554E;
+    line-height: 1.7;
+  }
+  .stormis-about-story {
+    padding: 80px 0;
+    background-color: #FFFFFF;
+  }
+  .stormis-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  @media (max-width: 991px) {
+    .stormis-about-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+  .stormis-about-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 60px;
+  }
+  @media (max-width: 850px) {
+    .stormis-about-card-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+  .stormis-about-card {
+    background: #FAF7F2;
+    border: 1px solid #EAE3D9;
+    border-radius: 16px;
+    padding: 40px 32px;
+    text-align: center;
+  }
+  .stormis-about-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: #1E1B18;
+    margin-bottom: 12px;
+  }
+  .stormis-about-card p {
+    font-size: 15px;
+    color: #6E665E;
+    line-height: 1.65;
+    margin: 0;
+  }
+</style>
+
+<div class="stormis-about-hero">
+  <div class="m-container container" style="max-width: 1280px; margin: 0 auto; padding: 0 20px; width: 100%;">
+    <div class="stormis-badge">Our Heritage & Craft</div>
+    <h1 class="stormis-about-hero__title">The Art of Swedish Confectionery</h1>
+    <p class="stormis-about-hero__desc">
+      Founded on the principles of Scandinavian minimalism, pure wild Nordic ingredients, and unhurried craftsmanship, Stormi’s Godis brings the pinnacle of European sweet artistry into every home.
+    </p>
+  </div>
+</div>
+
+<div class="stormis-about-story">
+  <div class="m-container container" style="max-width: 1280px; margin: 0 auto; padding: 0 20px; width: 100%;">
+    <div class="stormis-about-grid">
+      <div>
+        <img src="{{ 'stormis-brand-story.jpg' | asset_url }}" alt="Swedish Craftsmanship" style="width:100%; border-radius:18px; box-shadow:0 16px 36px rgba(0,0,0,0.06);">
+      </div>
+      <div>
+        <div class="stormis-badge">Swedish Tradition</div>
+        <h2 style="font-family:'Cormorant Garamond', serif; font-size:38px; line-height:1.2; color:#1E1B18; margin-bottom:20px;">
+          Lördagsgodis Reimagined for the Modern Connoisseur
+        </h2>
+        <p style="font-size:16px; line-height:1.75; color:#5C554E; margin-bottom:18px;">
+          In Sweden, candy is a cultural ritual—celebrated in the tradition of *lördagsgodis* (Saturday sweets). At Stormi’s Godis, we elevated this cherished custom into a gourmet luxury experience.
+        </p>
+        <p style="font-size:16px; line-height:1.75; color:#5C554E; margin-bottom:24px;">
+          We forgo high-fructose syrups and artificial colorants, turning instead to organic Scandinavian berry extracts, single-estate cocoa beans, bourbon vanilla, and hand-harvested sea salt flakes.
+        </p>
+        <div style="padding:20px; background:#FAF7F2; border-left:3px solid #C83E3E; border-radius:0 12px 12px 0;">
+          <p style="font-style:italic; font-size:15px; color:#1E1B18; margin:0;">
+            "We craft candy not just to be eaten, but to create a moment of pure Scandinavian mindfulness and joy."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stormis-about-card-grid">
+      <!-- 1. Swedish Heritage -->
+      <div class="stormis-about-card">
+        <div style="font-size:28px; margin-bottom:12px; color:#C83E3E;">🇸🇪</div>
+        <h3>Swedish Heritage</h3>
+        <p>Honoring centuries of Nordic confectionery recipes with timeless elegance and modern aesthetic finesse.</p>
+      </div>
+
+      <!-- 2. Quality Promise -->
+      <div class="stormis-about-card">
+        <div style="font-size:28px; margin-bottom:12px; color:#C5A880;">✦</div>
+        <h3>Quality Promise</h3>
+        <p>Small batch kettle-cooking, zero synthetic preservatives, and strict ethical sourcing across our supply chain.</p>
+      </div>
+
+      <!-- 3. Ingredients Philosophy -->
+      <div class="stormis-about-card">
+        <div style="font-size:28px; margin-bottom:12px; color:#C83E3E;">🌿</div>
+        <h3>Ingredients Philosophy</h3>
+        <p>Hand-harvested wild lingonberries, cloudberries, real fruit pectins, and premium single-origin chocolate ganache.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Stormis About Content",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Stormis About Content"
+    }
+  ]
+}
+{% endschema %}

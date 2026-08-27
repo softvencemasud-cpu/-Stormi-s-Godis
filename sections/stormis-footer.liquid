@@ -1,0 +1,274 @@
+<style>
+  .stormis-footer-multi {
+    background-color: #0D0A09;
+    border-top: 1px solid #28201B;
+    padding: 80px 0 40px;
+    color: #FAF7F2;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .stormis-footer-multi__container {
+    width: 92% !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+  }
+  .stormis-footer-multi__grid {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.8fr !important;
+    gap: 40px !important;
+    padding-bottom: 50px !important;
+    border-bottom: 1px solid #241D19 !important;
+  }
+  @media (max-width: 1100px) {
+    .stormis-footer-multi__grid {
+      grid-template-columns: 1fr 1fr 1fr !important;
+      gap: 30px !important;
+    }
+  }
+  @media (max-width: 767px) {
+    .stormis-footer-multi__grid {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+  }
+  .stormis-footer-brand__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin-bottom: 16px;
+  }
+  .stormis-footer-brand__title {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 38px !important;
+    color: #FAF7F2 !important;
+    line-height: 1 !important;
+  }
+  .stormis-footer-brand__desc {
+    font-size: 14px;
+    color: #B8AEA3;
+    line-height: 1.7;
+    margin-bottom: 22px;
+    max-width: 320px;
+  }
+  .stormis-footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .stormis-footer-social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1A1513;
+    border: 1px solid #382E29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FAF7F2;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+  .stormis-footer-social-link:hover {
+    background: #E5A93C;
+    color: #110E0D;
+    border-color: #E5A93C;
+    transform: translateY(-2px);
+  }
+  .stormis-footer-col__title {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: #E5A93C !important;
+    margin-bottom: 20px !important;
+  }
+  .stormis-footer-col__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .stormis-footer-col__link {
+    color: #D5CBC0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+  }
+  .stormis-footer-col__link:hover {
+    color: #E5A93C;
+    transform: translateX(3px);
+  }
+  .stormis-footer-newsletter__desc {
+    font-size: 13px;
+    color: #B8AEA3;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .stormis-footer-newsletter__form {
+    display: flex;
+    background: #1A1513;
+    border: 1px solid #382E29;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .stormis-footer-newsletter__input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    padding: 12px 14px;
+    color: #FAF7F2;
+    font-size: 13px;
+    outline: none;
+  }
+  .stormis-footer-newsletter__input::placeholder {
+    color: #7A7067;
+  }
+  .stormis-footer-newsletter__btn {
+    background: #E5A93C;
+    color: #110E0D;
+    border: none;
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .stormis-footer-newsletter__btn:hover {
+    background: #F4C468;
+  }
+  .stormis-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  @media (max-width: 767px) {
+    .stormis-footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .stormis-footer-copy {
+    font-size: 13px;
+    color: #7A7067;
+  }
+  .stormis-footer-payments {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9E948A;
+    font-size: 12px;
+  }
+</style>
+
+<footer class="stormis-footer-multi">
+  <div class="stormis-footer-multi__container">
+    <div class="stormis-footer-multi__grid">
+      <!-- Col 1: Brand & Bio -->
+      <div>
+        <a href="/" class="stormis-footer-brand__logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E5A93C" stroke-width="1.8">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+            <line x1="6" y1="1" x2="6" y2="4"></line>
+            <line x1="10" y1="1" x2="10" y2="4"></line>
+            <line x1="14" y1="1" x2="14" y2="4"></line>
+          </svg>
+          <span class="stormis-footer-brand__title">Stormi’s Godis</span>
+        </a>
+        <p class="stormis-footer-brand__desc">
+          Handcrafted Swedish confectionery inspired by Nordic tradition, vibrant wild berries, and the art of joyful gifting.
+        </p>
+        <div class="stormis-footer-socials">
+          <a href="https://instagram.com/stormisgodis" target="_blank" rel="noopener" class="stormis-footer-social-link" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" class="stormis-footer-social-link" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="https://tiktok.com/@stormisgodis" target="_blank" rel="noopener" class="stormis-footer-social-link" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Shop -->
+      <div>
+        <h4 class="stormis-footer-col__title">Shop</h4>
+        <ul class="stormis-footer-col__list">
+          <li><a href="/collections/all" class="stormis-footer-col__link">All Candy</a></li>
+          <li><a href="/collections/all" class="stormis-footer-col__link">Best Sellers</a></li>
+          <li><a href="/collections/all" class="stormis-footer-col__link">Gift Boxes</a></li>
+          <li><a href="/collections/all" class="stormis-footer-col__link">Collections</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Help -->
+      <div>
+        <h4 class="stormis-footer-col__title">Help</h4>
+        <ul class="stormis-footer-col__list">
+          <li><a href="/pages/contact" class="stormis-footer-col__link">Contact</a></li>
+          <li><a href="/pages/about-us" class="stormis-footer-col__link">FAQ</a></li>
+          <li><a href="/pages/contact" class="stormis-footer-col__link">Shipping Info</a></li>
+          <li><a href="/pages/contact" class="stormis-footer-col__link">Returns</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: About -->
+      <div>
+        <h4 class="stormis-footer-col__title">About</h4>
+        <ul class="stormis-footer-col__list">
+          <li><a href="/pages/about-us" class="stormis-footer-col__link">Our Story</a></li>
+          <li><a href="/pages/about-us" class="stormis-footer-col__link">Stockholm Atelier</a></li>
+          <li><a href="/pages/contact" class="stormis-footer-col__link">Privacy Policy</a></li>
+          <li><a href="/pages/contact" class="stormis-footer-col__link">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 5: Newsletter -->
+      <div>
+        <h4 class="stormis-footer-col__title">The Sweet Club</h4>
+        <p class="stormis-footer-newsletter__desc">
+          Subscribe for secret seasonal releases and enjoy <strong>10% off</strong> your first order.
+        </p>
+        <form class="stormis-footer-newsletter__form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to The Sweet Club!');">
+          <input type="email" class="stormis-footer-newsletter__input" placeholder="Your email address" required>
+          <button type="submit" class="stormis-footer-newsletter__btn">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="stormis-footer-bottom">
+      <p class="stormis-footer-copy">
+        © 2026 Stormi’s Godis. Handcrafted Swedish Artisan Confectionery. All rights reserved.
+      </p>
+      <div class="stormis-footer-payments">
+        <span>Guaranteed Safe Checkout</span>
+        <span>•</span>
+        <span>Visa • Mastercard • Amex • Apple Pay</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Stormis Multi Footer",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Stormis Multi Footer"
+    }
+  ]
+}
+{% endschema %}

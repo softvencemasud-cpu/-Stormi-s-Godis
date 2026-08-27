@@ -1,0 +1,247 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "favicon": "",
+    "container_width": 1440,
+    "container_fluid_width": 1620,
+    "container_fluid_offset": 65,
+    "type_base_font": "roboto_condensed_n4",
+    "use_custom_font_body": false,
+    "custom_body_font": "",
+    "custom_body_weight": "400",
+    "type_header_font": "roboto_condensed_n7",
+    "use_custom_font_heading": false,
+    "custom_heading_font": "",
+    "custom_heading_weight": "600",
+    "type_header_base_size": 36,
+    "h4_font_size": 24,
+    "btn_weight": "600",
+    "bg_cart_wishlist_count": "#E5A93C",
+    "img_overlay_opacity": 25,
+    "spacing_sections": 0,
+    "spacing_sections_mobile": 0,
+    "animations": "fade-in-up",
+    "pcard_layout": "1",
+    "pcard_alignment": "left",
+    "pcard_image_ratio": "1/1",
+    "show_compare_button": false,
+    "show_badge_sale": true,
+    "show_vendor": false,
+    "article_show_date": false,
+    "article_show_excerpt": true,
+    "article_show_button": true,
+    "variant_option_design1": "button",
+    "variant_option_design2": "default",
+    "variant_option_display_name2": "",
+    "variant_option_design3": "color",
+    "product_colors": "gold: #E5A93C,\ndark: #110E0D,\ncream: #F8F3EA,\nred: #C94343,\nchocolate: #1A1513",
+    "filter_color1": "Gold",
+    "filter_color2": "Chocolate",
+    "filter_color3": "Red",
+    "share_facebook": true,
+    "share_pinterest": true,
+    "social_twitter_link": "https://twitter.com/",
+    "social_twitter_label": "",
+    "social_facebook_link": "https://facebook.com/",
+    "social_facebook_label": "Stormi's Godis",
+    "social_pinterest_link": "https://www.pinterest.com/",
+    "social_pinterest_label": "",
+    "social_instagram_link": "https://instagram.com/stormisgodis",
+    "social_instagram_label": "stormisgodis",
+    "social_tiktok_link": "https://tiktok.com/@stormisgodis",
+    "discount_code_enable": true,
+    "cart_estimate_shipping": true,
+    "show_delivery_days": true,
+    "wishlist_page": "wishlist",
+    "product_compare_page": "product-compare",
+    "show_cookie_consent": false,
+    "cookie_consent_placement": "bottom-left",
+    "cookie_consent_theme": "dark",
+    "gm_api": "",
+    "custom_css": "",
+    "instagram_token": "",
+    "color_primary": "#E5A93C",
+    "color_main_bg": "#110E0D",
+    "color_field_bg": "#1A1513",
+    "color_body_text": "#FAF7F2",
+    "color_heading_text": "#FAF7F2",
+    "color_sub_text": "#D5CBC0",
+    "color_btn_bg_hover": "#D4AF37",
+    "prod_sale_price_color": "#E5A93C",
+    "prod_type_color": "#D5CBC0",
+    "color_annoucement_bg": "#1A1513",
+    "color_topbar_bg": "#110E0D",
+    "color_topbar_text": "#FAF7F2",
+    "color_header_bg": "#110E0D",
+    "color_header_link": "#FAF7F2",
+    "color_header_transparent": "#FAF7F2",
+    "color_menu_bar_bg": "#110E0D",
+    "color_menu_bar_text": "#FAF7F2",
+    "color_footer_bg": "#0D0A09",
+    "color_footer_text": "#FAF7F2",
+    "color_footer_subtext": "#B8AEA3",
+    "color_footer_link_hover": "#E5A93C",
+    "color_footer_bottom_bg": "#0D0A09",
+    "color_border": "#382E29",
+    "tooltip_background_color": "#E5A93C",
+    "enable_page_transition": true,
+    "show_variant_swatch_image": true,
+    "use_theme_currencies": true,
+    "theme_currencies": "USD | EUR | GBP | SEK",
+    "bg_cart_count": "#E5A93C",
+    "content_for_index": [],
+    "color_schemes": {
+      "default": {
+        "settings": {
+          "background": "#110E0D",
+          "background_secondary": "#1A1513",
+          "background_gradient": "",
+          "text": "#FAF7F2",
+          "subtext": "#D5CBC0",
+          "heading_text": "#FAF7F2",
+          "button": "#E5A93C",
+          "button_label": "#110E0D",
+          "outline_button_label": "#E5A93C",
+          "button_hover": "#D4AF37",
+          "button_text_hover": "#110E0D",
+          "price_sale": "#E5A93C",
+          "price_regular": "#FAF7F2",
+          "form_field": "#1A1513",
+          "form_field_label": "#FAF7F2",
+          "tooltip": "#E5A93C",
+          "tooltip_label": "#110E0D",
+          "border": "#382E29"
+        }
+      },
+      "dark": {
+        "settings": {
+          "background": "#0D0A09",
+          "background_secondary": "#1A1513",
+          "background_gradient": "",
+          "text": "#FAF7F2",
+          "subtext": "#B8AEA3",
+          "heading_text": "#FAF7F2",
+          "button": "#E5A93C",
+          "button_label": "#110E0D",
+          "outline_button_label": "#FAF7F2",
+          "button_hover": "#D4AF37",
+          "button_text_hover": "#110E0D",
+          "price_sale": "#E5A93C",
+          "price_regular": "#FAF7F2",
+          "form_field": "#1A1513",
+          "form_field_label": "#FAF7F2",
+          "tooltip": "#E5A93C",
+          "tooltip_label": "#110E0D",
+          "border": "#382E29"
+        }
+      },
+      "footer": {
+        "settings": {
+          "background": "#0D0A09",
+          "background_secondary": "#0D0A09",
+          "background_gradient": "",
+          "text": "#FAF7F2",
+          "subtext": "#B8AEA3",
+          "heading_text": "#FAF7F2",
+          "button": "#E5A93C",
+          "button_label": "#110E0D",
+          "outline_button_label": "#FAF7F2",
+          "button_hover": "#D4AF37",
+          "button_text_hover": "#110E0D",
+          "price_sale": "#E5A93C",
+          "price_regular": "#FAF7F2",
+          "form_field": "#1A1513",
+          "form_field_label": "#FAF7F2",
+          "tooltip": "#FAF7F2",
+          "tooltip_label": "#110E0D",
+          "border": "#28201B"
+        }
+      },
+      "badge-hot": {
+        "settings": {
+          "background": "#E5A93C",
+          "background_secondary": "#1A1513",
+          "background_gradient": "",
+          "text": "#110E0D",
+          "subtext": "#110E0D",
+          "heading_text": "#110E0D",
+          "button": "#E5A93C",
+          "button_label": "#110E0D",
+          "outline_button_label": "#E5A93C",
+          "button_hover": "#D4AF37",
+          "button_text_hover": "#110E0D",
+          "price_sale": "#E5A93C",
+          "price_regular": "#FAF7F2",
+          "form_field": "#1A1513",
+          "form_field_label": "#FAF7F2",
+          "tooltip": "#E5A93C",
+          "tooltip_label": "#110E0D",
+          "border": "#E5A93C"
+        }
+      },
+      "badge-new": {
+        "settings": {
+          "background": "#D4AF37",
+          "background_secondary": "#1A1513",
+          "background_gradient": "",
+          "text": "#110E0D",
+          "subtext": "#110E0D",
+          "heading_text": "#110E0D",
+          "button": "#E5A93C",
+          "button_label": "#110E0D",
+          "outline_button_label": "#E5A93C",
+          "button_hover": "#D4AF37",
+          "button_text_hover": "#110E0D",
+          "price_sale": "#E5A93C",
+          "price_regular": "#FAF7F2",
+          "form_field": "#1A1513",
+          "form_field_label": "#FAF7F2",
+          "tooltip": "#E5A93C",
+          "tooltip_label": "#110E0D",
+          "border": "#D4AF37"
+        }
+      },
+      "badge-sale": {
+        "settings": {
+          "background": "#C94343",
+          "background_secondary": "#1A1513",
+          "background_gradient": "",
+          "text": "#FFFFFF",
+          "subtext": "#FFFFFF",
+          "heading_text": "#FFFFFF",
+          "button": "#E5A93C",
+          "button_label": "#110E0D",
+          "outline_button_label": "#FFFFFF",
+          "button_hover": "#D4AF37",
+          "button_text_hover": "#110E0D",
+          "price_sale": "#E5A93C",
+          "price_regular": "#FAF7F2",
+          "form_field": "#1A1513",
+          "form_field_label": "#FAF7F2",
+          "tooltip": "#E5A93C",
+          "tooltip_label": "#110E0D",
+          "border": "#C94343"
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "content_for_index": []
+    }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".underline {text-decoration: underline;}",
+      ".m-richtext__subtitle,.m-lookbook__subheading {font-weight: 500;}"
+    ]
+  }
+}

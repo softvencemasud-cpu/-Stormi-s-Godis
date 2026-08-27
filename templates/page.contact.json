@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-contact",
+      "settings": {
+        "container": "container"
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "blocks": {
+        "text-block-1": {
+          "type": "textblock",
+          "settings": {
+            "title": "Stockholm Atelier",
+            "heading_size": "h5",
+            "content": "<p>Storgatan 18, Östermalm<br/>114 55 Stockholm, Sweden</p>"
+          }
+        },
+        "text-block-2": {
+          "type": "textblock",
+          "settings": {
+            "title": "Concierge Support",
+            "heading_size": "h5",
+            "content": "<p>concierge@stormisgodis.com<br/>+46 8 500 240 00</p>"
+          }
+        },
+        "text-block-3": {
+          "type": "socialmedia",
+          "settings": {
+            "title": "Follow Our Journey"
+          }
+        },
+        "text-block-4": {
+          "type": "textblock",
+          "settings": {
+            "title": "Atelier Hours",
+            "heading_size": "h5",
+            "content": "<p>Monday – Saturday: 10:00 – 18:00</p><p>Sunday: Closed for artisanal batch cooking</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text-block-1",
+        "text-block-2",
+        "text-block-3",
+        "text-block-4"
+      ],
+      "custom_css": [
+        ".m-contact-form__heading,.m-info-box__title {font-family: 'Cormorant Garamond', serif !important; font-weight: 600; font-size: 24px;}"
+      ],
+      "settings": {
+        "container": "container",
+        "title": "Get in Touch with our Confectionery Concierge",
+        "heading_size": "h3",
+        "description": "<p>Have a question about our artisan candy batches, luxury corporate gifting, or bespoke hampers? Our concierge team is delighted to assist you.</p>",
+        "show_name": true,
+        "show_phone": true,
+        "show_signup_email": true,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "animations": "inherit"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "contact-form"
+  ]
+}

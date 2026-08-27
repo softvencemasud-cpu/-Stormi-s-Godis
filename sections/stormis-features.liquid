@@ -1,0 +1,188 @@
+<style>
+  .stormis-features-dark {
+    padding: 100px 0;
+    background-color: #110E0D;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  @media (max-width: 767px) {
+    .stormis-features-dark {
+      padding: 50px 0;
+    }
+  }
+  .stormis-features-dark__container {
+    width: 92% !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+  }
+  .stormis-features-dark__header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  .stormis-features-dark__title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 44px !important;
+    line-height: 1.15 !important;
+    color: #FAF7F2 !important;
+    margin-bottom: 14px !important;
+    font-weight: 600 !important;
+  }
+  @media (max-width: 767px) {
+    .stormis-features-dark__title {
+      font-size: 28px !important;
+    }
+  }
+  .stormis-features-dark__grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+  @media (max-width: 991px) {
+    .stormis-features-dark__grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 16px !important;
+    }
+  }
+  @media (max-width: 640px) {
+    .stormis-features-dark__grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 10px !important;
+    }
+  }
+  .stormis-feat-dark-card {
+    background: #1A1513;
+    border-radius: 8px;
+    padding: 30px 20px;
+    border: 1px solid #382E29;
+    text-align: center;
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: 640px) {
+    .stormis-feat-dark-card {
+      padding: 18px 10px;
+    }
+  }
+  .stormis-feat-dark-card:hover {
+    transform: translateY(-4px);
+    border-color: #D4AF37;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.5);
+  }
+  .stormis-feat-dark-card__icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #241E1A;
+    border: 1px solid #382E29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: #E5A93C;
+    transition: all 0.3s ease;
+  }
+  @media (max-width: 640px) {
+    .stormis-feat-dark-card__icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+  }
+  .stormis-feat-dark-card:hover .stormis-feat-dark-card__icon {
+    background: #E5A93C;
+    color: #110E0D;
+    border-color: #E5A93C;
+    transform: scale(1.1);
+  }
+  .stormis-feat-dark-card__title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 22px !important;
+    color: #FAF7F2 !important;
+    margin-bottom: 8px !important;
+    font-weight: 600 !important;
+  }
+  @media (max-width: 640px) {
+    .stormis-feat-dark-card__title {
+      font-size: 16px !important;
+      margin-bottom: 4px !important;
+    }
+  }
+  .stormis-feat-dark-card__desc {
+    font-size: 13px;
+    color: #D5CBC0;
+    line-height: 1.5;
+    margin: 0;
+  }
+  @media (max-width: 640px) {
+    .stormis-feat-dark-card__desc {
+      font-size: 11px;
+      line-height: 1.35;
+    }
+  }
+</style>
+
+<section class="stormis-features-dark">
+  <div class="stormis-features-dark__container">
+    <div class="stormis-features-dark__header">
+      <div class="stormis-gold-divider">
+        <span>~ WHY STORMI’S GODIS ~</span>
+      </div>
+      <h2 class="stormis-features-dark__title">Confectionery as an Art Form</h2>
+      <p style="color: #D5CBC0; font-size: 14px;">Every detail is thoughtfully curated from kettle cooking to presentation.</p>
+    </div>
+
+    <div class="stormis-features-dark__grid">
+      <!-- 1 -->
+      <div class="stormis-feat-dark-card">
+        <div class="stormis-feat-dark-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <h3 class="stormis-feat-dark-card__title">Small-Batch Artisan</h3>
+        <p class="stormis-feat-dark-card__desc">Slowly kettle-cooked in limited batches in Stockholm.</p>
+      </div>
+
+      <!-- 2 -->
+      <div class="stormis-feat-dark-card">
+        <div class="stormis-feat-dark-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path><path d="M12 6v6l4 2"></path></svg>
+        </div>
+        <h3 class="stormis-feat-dark-card__title">Single-Origin Cocoa</h3>
+        <p class="stormis-feat-dark-card__desc">Ethically harvested cocoa beans infused with pure cream.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="stormis-feat-dark-card">
+        <div class="stormis-feat-dark-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+        </div>
+        <h3 class="stormis-feat-dark-card__title">Luxury Gift Boxes</h3>
+        <p class="stormis-feat-dark-card__desc">Signature matte boxes with embossed gold foil seal.</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="stormis-feat-dark-card">
+        <div class="stormis-feat-dark-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <h3 class="stormis-feat-dark-card__title">Climate Shipping</h3>
+        <p class="stormis-feat-dark-card__desc">Temperature protected to arrive in pristine condition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Stormis Dark Features",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Stormis Dark Features"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,304 @@
+<!-- Stormi's Godis Luxury Slide-In Cart Drawer & Express Checkout Payment Engine -->
+<div id="stormisLuxuryCartDrawer" class="stormis-cart-drawer-wrap" style="position:fixed; inset:0; z-index:999999; display:none; pointer-events:none;">
+  <!-- Backdrop -->
+  <div id="stormisCartBackdrop" style="position:absolute; inset:0; background:rgba(0,0,0,0.85); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); opacity:0; transition:opacity 0.35s ease;" onclick="closeStormisCartDrawer()"></div>
+
+  <!-- Drawer Panel -->
+  <div id="stormisCartPanel" style="position:absolute; top:0; right:0; bottom:0; width:100%; max-width:440px; background:#161210; border-left:1px solid #D4AF37; box-shadow:-10px 0 40px rgba(0,0,0,0.8); display:flex; flex-direction:column; transform:translateX(100%); transition:transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); box-sizing:border-box;">
+    
+    <!-- Drawer Header -->
+    <div style="padding:22px 24px; border-bottom:1px solid #28201B; display:flex; align-items:center; justify-content:space-between; background:#110E0D;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E5A93C" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <h3 style="font-family:'Cormorant Garamond', serif; font-size:24px; color:#FAF7F2; margin:0; font-weight:600;">Your Sweet Bag (<span id="stormisDrawerCount">0</span>)</h3>
+      </div>
+      <button type="button" style="width:34px; height:34px; border-radius:50%; background:#241E1A; border:1px solid #382E29; color:#FAF7F2; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s;" onclick="closeStormisCartDrawer()">&times;</button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div style="padding:14px 24px; background:#1A1513; border-bottom:1px solid #28201B; font-size:13px; color:#D5CBC0;">
+      <div id="stormisFreeShipText" style="margin-bottom:8px; font-weight:500;">Add <strong style="color:#E5A93C;">$75.00</strong> for Free Climate-Safe Shipping</div>
+      <div style="width:100%; height:6px; background:#28201B; border-radius:10px; overflow:hidden;">
+        <div id="stormisShipProgressBar" style="width:0%; height:100%; background:linear-gradient(to right, #D4AF37, #E5A93C); border-radius:10px; transition:width 0.4s ease;"></div>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div id="stormisCartItemsContainer" style="flex:1; overflow-y:auto; padding:20px 24px; display:flex; flex-direction:column; gap:16px;">
+      <!-- Populated via JS -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="stormisCartEmptyState" style="display:none; flex:1; flex-direction:column; align-items:center; justify-content:center; padding:40px 24px; text-align:center;">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#4A3E37" stroke-width="1.5" style="margin-bottom:16px;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+      <h4 style="font-family:'Cormorant Garamond', serif; font-size:24px; color:#FAF7F2; margin:0 0 8px;">Your Sweet Bag is Empty</h4>
+      <p style="font-size:14px; color:#8C8075; margin:0 0 24px;">Discover our artisan lingonberry gummies and 24k gold chocolate ganache.</p>
+      <a href="/collections/all" class="stormis-gold-btn" onclick="closeStormisCartDrawer()">Explore Collection</a>
+    </div>
+
+    <!-- Footer Checkout Area -->
+    <div id="stormisCartFooter" style="padding:22px 24px 28px; background:#110E0D; border-top:1px solid #28201B;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+        <span style="font-size:14px; color:#D5CBC0; text-transform:uppercase; letter-spacing:0.06em;">Subtotal</span>
+        <span id="stormisCartSubtotal" style="font-family:'Plus Jakarta Sans', sans-serif; font-size:22px; font-weight:700; color:#E5A93C;">$0.00</span>
+      </div>
+      <p style="font-size:12px; color:#8C8075; margin:0 0 18px;">Taxes and shipping calculated at checkout.</p>
+
+      <button type="button" id="stormisCheckoutBtn" style="width:100%; padding:16px 24px; background:#E5A93C; color:#110E0D; border:none; border-radius:4px; font-size:14px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; transition:all 0.25s ease; box-shadow:0 6px 20px rgba(229,169,60,0.35);" onclick="openStormisCheckoutModal()">
+        Proceed to Secure Checkout 🔒
+      </button>
+
+      <div style="display:flex; align-items:center; justify-content:center; gap:8px; margin-top:14px; font-size:11px; color:#7A7067;">
+        <span>Visa</span> • <span>Mastercard</span> • <span>Apple Pay</span> • <span>Shop Pay</span> • <span>PayPal</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Direct Express Checkout Payment Modal -->
+<div id="stormisCheckoutModal" style="position:fixed; inset:0; z-index:9999999; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); padding:20px; box-sizing:border-box;" onclick="closeStormisCheckoutModal(event)">
+  <div style="background:#161210; border:1px solid #D4AF37; border-radius:12px; width:100%; max-width:520px; max-height:90vh; overflow-y:auto; padding:32px; box-shadow:0 25px 60px rgba(0,0,0,0.8); position:relative; box-sizing:border-box;" onclick="event.stopPropagation()">
+    <button type="button" style="position:absolute; top:16px; right:16px; width:32px; height:32px; border-radius:50%; background:#241E1A; border:1px solid #382E29; color:#FAF7F2; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center;" onclick="closeStormisCheckoutModal()">&times;</button>
+    
+    <div style="text-align:center; margin-bottom:20px;">
+      <div style="color:#E5A93C; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:4px;">🔒 SECURE 256-BIT ENCRYPTED CHECKOUT</div>
+      <h3 style="font-family:'Cormorant Garamond', serif; font-size:30px; color:#FAF7F2; margin:0 0 6px; font-weight:600;">Complete Your Order</h3>
+      <div style="display:flex; justify-content:center; align-items:baseline; gap:8px;">
+        <span style="font-size:14px; color:#D5CBC0;">Order Total:</span>
+        <strong id="checkoutModalTotal" style="color:#E5A93C; font-size:22px; font-family:'Plus Jakarta Sans', sans-serif;">$0.00</strong>
+      </div>
+    </div>
+
+    <form onsubmit="handleFinalOrderPayment(event)" style="display:flex; flex-direction:column; gap:14px;">
+      <div>
+        <label style="font-size:11px; font-weight:700; color:#FAF7F2; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:6px;">Contact Information</label>
+        <input type="email" required placeholder="your.email@domain.com" style="width:100%; background:#1A1513; border:1px solid #382E29; border-radius:4px; padding:12px 14px; color:#FAF7F2; font-size:13px; outline:none; box-sizing:border-box;">
+      </div>
+
+      <div>
+        <label style="font-size:11px; font-weight:700; color:#FAF7F2; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:6px;">Shipping Address</label>
+        <input type="text" required placeholder="Full Name, Street Address, City, Country, Postal Code" style="width:100%; background:#1A1513; border:1px solid #382E29; border-radius:4px; padding:12px 14px; color:#FAF7F2; font-size:13px; outline:none; box-sizing:border-box;">
+      </div>
+
+      <div>
+        <label style="font-size:11px; font-weight:700; color:#FAF7F2; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:6px;">Payment Method</label>
+        <div style="background:#1A1513; border:1px solid #382E29; border-radius:4px; padding:12px; display:flex; flex-direction:column; gap:10px;">
+          <label style="display:flex; align-items:center; gap:10px; font-size:13px; color:#FAF7F2; cursor:pointer;">
+            <input type="radio" name="payMethod" value="card" checked style="accent-color:#E5A93C;">
+            <span>Credit / Debit Card (Visa, MasterCard, Amex)</span>
+          </label>
+          <label style="display:flex; align-items:center; gap:10px; font-size:13px; color:#FAF7F2; cursor:pointer;">
+            <input type="radio" name="payMethod" value="applepay" style="accent-color:#E5A93C;">
+            <span>Apple Pay / Google Pay / Shop Pay</span>
+          </label>
+          <label style="display:flex; align-items:center; gap:10px; font-size:13px; color:#FAF7F2; cursor:pointer;">
+            <input type="radio" name="payMethod" value="paypal" style="accent-color:#E5A93C;">
+            <span>PayPal</span>
+          </label>
+        </div>
+      </div>
+
+      <div>
+        <label style="font-size:11px; font-weight:700; color:#FAF7F2; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:6px;">Card Number & Expiry (Demo / Live)</label>
+        <input type="text" placeholder="•••• •••• •••• ••••   MM/YY  CVC" style="width:100%; background:#1A1513; border:1px solid #382E29; border-radius:4px; padding:12px 14px; color:#FAF7F2; font-size:13px; outline:none; box-sizing:border-box;">
+      </div>
+
+      <button type="submit" id="payNowSubmitBtn" style="width:100%; padding:16px; background:#E5A93C; color:#110E0D; border:none; border-radius:4px; font-size:14px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; margin-top:8px; transition:all 0.25s; box-shadow:0 6px 20px rgba(229,169,60,0.35);">
+        Pay & Confirm Order 🛍️
+      </button>
+
+      <p style="font-size:11px; color:#8C8075; text-align:center; margin:4px 0 0;">
+        Guaranteed safe checkout. Insulated climate-safe packaging included.
+      </p>
+    </form>
+  </div>
+</div>
+
+<script>
+  window.stormisCart = JSON.parse(localStorage.getItem('stormis_cart_items') || '[]');
+
+  document.addEventListener('DOMContentLoaded', () => {
+    updateStormisCartUI();
+
+    document.querySelectorAll('.m-cart-icon, .m-header__cart, a[href="/cart"]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openStormisCartDrawer();
+      });
+    });
+  });
+
+  function saveStormisCart() {
+    localStorage.setItem('stormis_cart_items', JSON.stringify(window.stormisCart));
+    updateStormisCartUI();
+  }
+
+  function addProductToCart(title, priceStr, variant, imgUrl, qty = 1) {
+    const numericPrice = parseFloat(priceStr.replace(/[^0-9.]/g, '')) || 28;
+    const existingIndex = window.stormisCart.findIndex(i => i.title === title && i.variant === variant);
+
+    if (existingIndex > -1) {
+      window.stormisCart[existingIndex].qty += qty;
+    } else {
+      window.stormisCart.push({
+        title,
+        priceStr,
+        price: numericPrice,
+        variant,
+        img: imgUrl,
+        qty: qty
+      });
+    }
+
+    saveStormisCart();
+    openStormisCartDrawer();
+  }
+
+  function updateStormisCartUI() {
+    const totalItems = window.stormisCart.reduce((sum, item) => sum + item.qty, 0);
+    const subtotal = window.stormisCart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+    const headerCountEls = document.querySelectorAll('.m-cart-count, .m-cart-icon__count');
+    headerCountEls.forEach(el => {
+      el.innerText = totalItems;
+      el.style.backgroundColor = '#E5A93C';
+      el.style.color = '#110E0D';
+    });
+
+    const drawerCount = document.getElementById('stormisDrawerCount');
+    if (drawerCount) drawerCount.innerText = totalItems;
+
+    const subtotalEl = document.getElementById('stormisCartSubtotal');
+    if (subtotalEl) subtotalEl.innerText = `$${subtotal.toFixed(2)}`;
+
+    const shipBar = document.getElementById('stormisShipProgressBar');
+    const shipText = document.getElementById('stormisFreeShipText');
+    if (shipBar && shipText) {
+      const remaining = Math.max(0, 75 - subtotal);
+      const percentage = Math.min(100, (subtotal / 75) * 100);
+      shipBar.style.width = `${percentage}%`;
+      if (remaining === 0) {
+        shipText.innerHTML = `🎉 <strong style="color:#85E39E;">You unlocked Free Climate-Safe Shipping!</strong>`;
+      } else {
+        shipText.innerHTML = `Add <strong style="color:#E5A93C;">$${remaining.toFixed(2)}</strong> more for Free Shipping`;
+      }
+    }
+
+    const container = document.getElementById('stormisCartItemsContainer');
+    const emptyState = document.getElementById('stormisCartEmptyState');
+    const footer = document.getElementById('stormisCartFooter');
+
+    if (!container) return;
+
+    if (window.stormisCart.length === 0) {
+      container.innerHTML = '';
+      container.style.display = 'none';
+      if (emptyState) emptyState.style.display = 'flex';
+      if (footer) footer.style.display = 'none';
+    } else {
+      container.style.display = 'flex';
+      if (emptyState) emptyState.style.display = 'none';
+      if (footer) footer.style.display = 'block';
+
+      container.innerHTML = window.stormisCart.map((item, idx) => `
+        <div style="display:flex; gap:14px; background:#1A1513; border:1px solid #382E29; border-radius:8px; padding:12px; align-items:center;">
+          <img src="${item.img}" alt="${item.title}" style="width:68px; height:68px; object-fit:cover; border-radius:6px; background:#110E0D; border:1px solid #28201B; flex-shrink:0;">
+          <div style="flex:1; min-width:0;">
+            <h4 style="font-family:'Cormorant Garamond', serif; font-size:18px; color:#FAF7F2; margin:0 0 4px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${item.title}</h4>
+            <span style="font-size:12px; color:#8C8075; display:block; margin-bottom:8px;">${item.variant}</span>
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <div style="display:flex; align-items:center; border:1px solid #382E29; border-radius:4px; background:#110E0D;">
+                <button type="button" style="width:26px; height:26px; background:transparent; border:none; color:#FAF7F2; cursor:pointer; font-size:14px;" onclick="changeCartItemQty(${idx}, -1)">-</button>
+                <span style="width:26px; text-align:center; font-size:12px; font-weight:700; color:#FAF7F2;">${item.qty}</span>
+                <button type="button" style="width:26px; height:26px; background:transparent; border:none; color:#FAF7F2; cursor:pointer; font-size:14px;" onclick="changeCartItemQty(${idx}, 1)">+</button>
+              </div>
+              <span style="font-size:15px; font-weight:700; color:#E5A93C;">$${(item.price * item.qty).toFixed(2)}</span>
+            </div>
+          </div>
+          <button type="button" style="background:transparent; border:none; color:#8C8075; cursor:pointer; padding:6px; font-size:16px; transition:color 0.2s;" onclick="removeCartItem(${idx})" title="Remove item">&times;</button>
+        </div>
+      `).join('');
+    }
+  }
+
+  function changeCartItemQty(idx, delta) {
+    if (!window.stormisCart[idx]) return;
+    window.stormisCart[idx].qty += delta;
+    if (window.stormisCart[idx].qty <= 0) {
+      window.stormisCart.splice(idx, 1);
+    }
+    saveStormisCart();
+  }
+
+  function removeCartItem(idx) {
+    window.stormisCart.splice(idx, 1);
+    saveStormisCart();
+  }
+
+  function openStormisCartDrawer() {
+    const wrap = document.getElementById('stormisLuxuryCartDrawer');
+    const backdrop = document.getElementById('stormisCartBackdrop');
+    const panel = document.getElementById('stormisCartPanel');
+    if (!wrap || !backdrop || !panel) return;
+
+    wrap.style.display = 'block';
+    wrap.style.pointerEvents = 'auto';
+    setTimeout(() => {
+      backdrop.style.opacity = '1';
+      panel.style.transform = 'translateX(0)';
+    }, 10);
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeStormisCartDrawer() {
+    const wrap = document.getElementById('stormisLuxuryCartDrawer');
+    const backdrop = document.getElementById('stormisCartBackdrop');
+    const panel = document.getElementById('stormisCartPanel');
+    if (!wrap || !backdrop || !panel) return;
+
+    backdrop.style.opacity = '0';
+    panel.style.transform = 'translateX(100%)';
+    setTimeout(() => {
+      wrap.style.display = 'none';
+      wrap.style.pointerEvents = 'none';
+      document.body.style.overflow = '';
+    }, 350);
+  }
+
+  function openStormisCheckoutModal() {
+    closeStormisCartDrawer();
+    const modal = document.getElementById('stormisCheckoutModal');
+    const subtotal = window.stormisCart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+    document.getElementById('checkoutModalTotal').innerText = `$${subtotal.toFixed(2)}`;
+    if (modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeStormisCheckoutModal(e) {
+    if (e && e.target !== e.currentTarget) return;
+    const modal = document.getElementById('stormisCheckoutModal');
+    if (modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  }
+
+  function handleFinalOrderPayment(e) {
+    e.preventDefault();
+    const btn = document.getElementById('payNowSubmitBtn');
+    btn.innerHTML = 'Processing Secure Payment... ⏳';
+    btn.style.backgroundColor = '#4A6B53';
+
+    setTimeout(() => {
+      const orderNum = 'SG-' + Math.floor(100000 + Math.random() * 900000);
+      alert(`🎉 Order Confirmed! (#${orderNum})\n\nThank you for shopping at Stormi’s Godis!\nYour payment has been approved and your freshly kettle-cooked Swedish sweets will be dispatched in climate-safe packaging.\n\nA confirmation email and tracking link have been sent.`);
+      window.stormisCart = [];
+      saveStormisCart();
+      closeStormisCheckoutModal();
+      btn.innerHTML = 'Pay & Confirm Order 🛍️';
+      btn.style.backgroundColor = '#E5A93C';
+    }, 1000);
+  }
+</script>

@@ -1,0 +1,530 @@
+<style>
+  .stormis-product-page-dark {
+    background-color: #110E0D;
+    color: #FAF7F2;
+    padding: 40px 0 100px;
+    min-height: 85vh;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .stormis-product-page-dark__container {
+    width: 92% !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+  }
+  .stormis-breadcrumb-dark {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #8C8075;
+    margin-bottom: 30px;
+  }
+  .stormis-breadcrumb-dark a {
+    color: #D5CBC0;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .stormis-breadcrumb-dark a:hover {
+    color: #E5A93C;
+  }
+  .stormis-pdp-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 1fr !important;
+    gap: 60px !important;
+    align-items: flex-start !important;
+    margin-bottom: 80px !important;
+  }
+  @media (max-width: 991px) {
+    .stormis-pdp-grid {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  }
+  .stormis-pdp-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 90px;
+  }
+  .stormis-pdp-main-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    object-fit: cover;
+    background: #161210;
+    border: 1px solid #382E29;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+  }
+  .stormis-pdp-thumbs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .stormis-pdp-thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    background: #161210;
+  }
+  .stormis-pdp-thumb.is-active, .stormis-pdp-thumb:hover {
+    border-color: #E5A93C;
+    transform: scale(1.03);
+  }
+  .stormis-pdp-vendor {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #E5A93C;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .stormis-pdp-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 44px !important;
+    line-height: 1.15 !important;
+    color: #FAF7F2 !important;
+    margin-bottom: 14px !important;
+    font-weight: 600 !important;
+  }
+  @media (max-width: 767px) {
+    .stormis-pdp-title {
+      font-size: 32px !important;
+    }
+  }
+  .stormis-pdp-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #D5CBC0;
+    margin-bottom: 18px;
+  }
+  .stormis-pdp-price {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #E5A93C;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .stormis-pdp-badge-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(229, 169, 60, 0.15);
+    color: #E5A93C;
+    border: 1px solid #E5A93C;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .stormis-pdp-viewers {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1A1513;
+    border: 1px solid #382E29;
+    border-radius: 30px;
+    padding: 6px 16px;
+    font-size: 13px;
+    color: #D5CBC0;
+    margin-bottom: 24px;
+  }
+  .stormis-pdp-viewers-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #E5A93C;
+    animation: pulseGlow 1.5s infinite;
+  }
+  @keyframes pulseGlow {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+  }
+  .stormis-pdp-variants {
+    margin-bottom: 24px;
+  }
+  .stormis-pdp-variants label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #FAF7F2;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .stormis-pdp-var-btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .stormis-pdp-var-btn {
+    padding: 10px 20px;
+    background: #1A1513;
+    border: 1px solid #382E29;
+    border-radius: 4px;
+    color: #FAF7F2;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .stormis-pdp-var-btn.is-active, .stormis-pdp-var-btn:hover {
+    border-color: #E5A93C;
+    color: #E5A93C;
+    background: rgba(229, 169, 60, 0.08);
+  }
+  .stormis-pdp-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  .stormis-pdp-act-row {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  .stormis-pdp-qty {
+    display: flex;
+    align-items: center;
+    border: 1px solid #382E29;
+    border-radius: 4px;
+    background: #1A1513;
+    overflow: hidden;
+  }
+  .stormis-pdp-qty button {
+    width: 42px;
+    height: 48px;
+    background: transparent;
+    border: none;
+    color: #FAF7F2;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .stormis-pdp-qty button:hover {
+    color: #E5A93C;
+  }
+  .stormis-pdp-qty input {
+    width: 44px;
+    text-align: center;
+    border: none;
+    color: #FAF7F2;
+    font-size: 15px;
+    font-weight: 700;
+    background: transparent;
+  }
+  .stormis-pdp-atc-btn {
+    flex-grow: 1;
+    padding: 16px 32px;
+    background: #E5A93C;
+    color: #110E0D;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(229, 169, 60, 0.35);
+  }
+  .stormis-pdp-atc-btn:hover {
+    background: #F4C468;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(229, 169, 60, 0.5);
+  }
+  .stormis-pdp-buynow-btn {
+    width: 100%;
+    padding: 15px 32px;
+    background: #110E0D;
+    color: #E5A93C;
+    border: 1px solid #E5A93C;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  .stormis-pdp-buynow-btn:hover {
+    background: #E5A93C;
+    color: #110E0D;
+  }
+  .stormis-pdp-accordions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 36px;
+    border-top: 1px solid #28201B;
+    padding-top: 24px;
+  }
+  .stormis-pdp-acc-item {
+    background: #1A1513;
+    border: 1px solid #382E29;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .stormis-pdp-acc-header {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FAF7F2;
+    user-select: none;
+  }
+  .stormis-pdp-acc-header span {
+    color: #E5A93C;
+    font-size: 18px;
+    transition: transform 0.3s;
+  }
+  .stormis-pdp-acc-body {
+    padding: 0 20px 18px;
+    font-size: 14px;
+    color: #B8AEA3;
+    line-height: 1.65;
+    display: block;
+  }
+</style>
+
+<div class="stormis-product-page-dark">
+  <div class="stormis-product-page-dark__container">
+    <!-- Breadcrumb -->
+    <div class="stormis-breadcrumb-dark">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/collections/all">Collections</a>
+      <span>/</span>
+      <span id="pdpBreadcrumbTitle" style="color: #FAF7F2;">Swedish Berry Collection</span>
+    </div>
+
+    <!-- Main PDP Grid -->
+    <div class="stormis-pdp-grid">
+      <!-- Media Gallery -->
+      <div class="stormis-pdp-gallery">
+        <img id="pdpMainImg" src="{{ 'prod-berry-main.jpg' | asset_url }}" alt="Product Photo" class="stormis-pdp-main-img">
+        <div class="stormis-pdp-thumbs">
+          <img id="pdpThumb1" src="{{ 'prod-berry-main.jpg' | asset_url }}" alt="Packshot" class="stormis-pdp-thumb is-active" onclick="switchPdpImg(this.src, this)">
+          <img id="pdpThumb2" src="{{ 'prod-berry-lifestyle.jpg' | asset_url }}" alt="Lifestyle" class="stormis-pdp-thumb" onclick="switchPdpImg(this.src, this)">
+          <img id="pdpThumb3" src="{{ 'prod-berry-macro.jpg' | asset_url }}" alt="Texture" class="stormis-pdp-thumb" onclick="switchPdpImg(this.src, this)">
+        </div>
+      </div>
+
+      <!-- Info & Buy Form -->
+      <div>
+        <span class="stormis-pdp-vendor">Stormi’s Godis • Swedish Artisan Confectionery</span>
+        <h1 id="pdpTitle" class="stormis-pdp-title">Swedish Berry Collection</h1>
+
+        <div class="stormis-pdp-rating">
+          <span style="color: #E5A93C; letter-spacing: 2px;">★★★★★</span>
+          <span id="pdpRatingText">5.0 (128 verified reviews)</span>
+        </div>
+
+        <div class="stormis-pdp-price">
+          <span id="pdpPrice">$28.00</span>
+          <span class="stormis-pdp-badge-tag">In Stock • Small-Batch Fresh</span>
+        </div>
+
+        <div class="stormis-pdp-viewers">
+          <span class="stormis-pdp-viewers-dot"></span>
+          <span><strong>24 confectionery lovers</strong> are viewing this right now</span>
+        </div>
+
+        <!-- Size Variant Picker -->
+        <div class="stormis-pdp-variants">
+          <label>Select Size / Box Presentation:</label>
+          <div class="stormis-pdp-var-btn-group">
+            <button type="button" class="stormis-pdp-var-btn is-active" onclick="switchPdpVariant('250g Signature Box', '$28.00', this)">250g Signature Box</button>
+            <button type="button" class="stormis-pdp-var-btn" onclick="switchPdpVariant('500g Deluxe Double Box', '$48.00', this)">500g Deluxe Double Box</button>
+            <button type="button" class="stormis-pdp-var-btn" onclick="switchPdpVariant('Deluxe Gift Hamper', '$65.00', this)">Deluxe Keepsake Hamper</button>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="stormis-pdp-actions">
+          <div class="stormis-pdp-act-row">
+            <div class="stormis-pdp-qty">
+              <button type="button" onclick="adjustPdpQty(-1)">-</button>
+              <input type="text" id="pdpQty" value="1" readonly>
+              <button type="button" onclick="adjustPdpQty(1)">+</button>
+            </div>
+            <button type="button" id="pdpAtcBtn" class="stormis-pdp-atc-btn" onclick="handlePdpAddToCartAction()">
+              Add to Cart • <span id="pdpAtcPrice">$28.00</span>
+            </button>
+          </div>
+          <button type="button" class="stormis-pdp-buynow-btn" onclick="handlePdpBuyNowAction()">
+            Buy Now with Instant Checkout ⚡
+          </button>
+        </div>
+
+        <!-- Accordions -->
+        <div class="stormis-pdp-accordions">
+          <div class="stormis-pdp-acc-item">
+            <div class="stormis-pdp-acc-header">
+              <span>🌿 The Artisan Recipe & Story</span>
+            </div>
+            <div class="stormis-pdp-acc-body" id="pdpDescBody">
+              A sublime sensory journey through sun-ripened Swedish lingonberries, wild raspberries, and cloudberries, lightly dusted in tart natural crystal sugar. Slowly kettle-cooked in Stockholm for the perfect melt-in-mouth chew.
+            </div>
+          </div>
+
+          <div class="stormis-pdp-acc-item">
+            <div class="stormis-pdp-acc-header">
+              <span>🍓 Pure Natural Ingredients</span>
+            </div>
+            <div class="stormis-pdp-acc-body" id="pdpIngredientsBody">
+              Wild Nordic lingonberry & raspberry puree, organic Swedish beet sugar, natural apple pectin, fresh lemon juice, botanical berry essences. 100% vegan, gelatin-free, zero artificial colors.
+            </div>
+          </div>
+
+          <div class="stormis-pdp-acc-item">
+            <div class="stormis-pdp-acc-header">
+              <span>📦 Luxury Keepsake Packaging & Gifting</span>
+            </div>
+            <div class="stormis-pdp-acc-body">
+              Every order arrives in our signature matte rigid keepsake case debossed with the Stormi’s Godis gold seal, hand-tied with silk ribbon. Complimentary personalized handwritten gift notes available at checkout.
+            </div>
+          </div>
+
+          <div class="stormis-pdp-acc-item">
+            <div class="stormis-pdp-acc-header">
+              <span>🚚 Climate-Safe Fresh Delivery</span>
+            </div>
+            <div class="stormis-pdp-acc-body">
+              Dispatched fresh from Stockholm in insulated temperature-safe packaging to ensure chocolates and gummies arrive in pristine confectionery condition. Free shipping on orders over $75.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const pdpProductsDB = {
+    "swedish-berry-collection": {
+      title: "Swedish Berry Collection",
+      price: "$28.00",
+      rating: "5.0 (128 verified reviews)",
+      desc: "A sublime sensory journey through sun-ripened Swedish lingonberries, wild raspberries, and cloudberries, lightly dusted in tart natural crystal sugar. Slowly kettle-cooked in Stockholm for the perfect chew.",
+      ingredients: "Wild Nordic lingonberry & raspberry puree, organic Swedish beet sugar, natural apple pectin, lemon juice, botanical berry essences. 100% vegan, gelatin-free, zero artificial colors.",
+      imgMain: "{{ 'prod-berry-main.jpg' | asset_url }}",
+      imgLife: "{{ 'prod-berry-lifestyle.jpg' | asset_url }}",
+      imgMacro: "{{ 'prod-berry-macro.jpg' | asset_url }}"
+    },
+    "luxury-chocolate-selection": {
+      title: "Nordic Chocolate Selection",
+      price: "$36.00",
+      rating: "5.0 (94 verified reviews)",
+      desc: "Handcrafted Scandinavian dark chocolate ganache pralines and velvety cocoa truffles infused with hand-harvested Nordic sea salt flakes and 24k edible gold.",
+      ingredients: "70% Single-origin cocoa beans, cocoa butter, organic Swedish cream, bourbon vanilla, sea salt flakes, edible 24k gold leaf.",
+      imgMain: "{{ 'prod-choco-main.jpg' | asset_url }}",
+      imgLife: "{{ 'prod-choco-lifestyle.jpg' | asset_url }}",
+      imgMacro: "{{ 'prod-choco-macro.jpg' | asset_url }}"
+    },
+    "scandinavian-candy-mix": {
+      title: "Scandinavian Candy Mix",
+      price: "$24.00",
+      rating: "4.9 (156 verified reviews)",
+      desc: "The quintessential Swedish godis celebration. An exquisite curation of raspberry sour skulls, salty sweet licorice diamonds, and fruit pastilles.",
+      ingredients: "Natural fruit essences, licorice root extract, salmiak salt, raw sugar cane, fruit pectins, organic beeswax polish.",
+      imgMain: "{{ 'prod-mix-main.jpg' | asset_url }}",
+      imgLife: "{{ 'prod-mix-lifestyle.jpg' | asset_url }}",
+      imgMacro: "{{ 'prod-mix-macro.jpg' | asset_url }}"
+    },
+    "premium-gift-candy-box": {
+      title: "Premium Swedish Gift Box",
+      price: "$65.00",
+      rating: "5.0 (82 verified reviews)",
+      desc: "Our master confectionery showcase. A multi-tier rigid keepsake gift box featuring our entire assortment of berry gummies, chocolate pralines, and artisan pastilles.",
+      ingredients: "Complete artisan confectionery curation: Wild berry jellies, gold dusted chocolate pralines, salted caramels, and sweet Scandinavian licorice.",
+      imgMain: "{{ 'prod-giftbox-main.jpg' | asset_url }}",
+      imgLife: "{{ 'stormis-lifestyle-banner.jpg' | asset_url }}",
+      imgMacro: "{{ 'prod-choco-macro.jpg' | asset_url }}"
+    }
+  };
+
+  const currentPath = window.location.pathname.toLowerCase();
+  let matchedProductKey = "swedish-berry-collection";
+  if (currentPath.includes("chocolate")) matchedProductKey = "luxury-chocolate-selection";
+  else if (currentPath.includes("mix")) matchedProductKey = "scandinavian-candy-mix";
+  else if (currentPath.includes("gift") || currentPath.includes("box")) matchedProductKey = "premium-gift-candy-box";
+
+  const pData = pdpProductsDB[matchedProductKey] || pdpProductsDB["swedish-berry-collection"];
+  let selectedVariantName = "250g Signature Box";
+  let currentPdpPrice = pData.price;
+
+  document.getElementById('pdpTitle').innerText = pData.title;
+  document.getElementById('pdpBreadcrumbTitle').innerText = pData.title;
+  document.getElementById('pdpPrice').innerText = pData.price;
+  document.getElementById('pdpAtcPrice').innerText = pData.price;
+  document.getElementById('pdpRatingText').innerText = pData.rating;
+  document.getElementById('pdpDescBody').innerText = pData.desc;
+  document.getElementById('pdpIngredientsBody').innerText = pData.ingredients;
+
+  document.getElementById('pdpMainImg').src = pData.imgMain;
+  document.getElementById('pdpThumb1').src = pData.imgMain;
+  document.getElementById('pdpThumb2').src = pData.imgLife;
+  document.getElementById('pdpThumb3').src = pData.imgMacro;
+
+  function switchPdpImg(src, el) {
+    document.getElementById('pdpMainImg').src = src;
+    document.querySelectorAll('.stormis-pdp-thumb').forEach(t => t.classList.remove('is-active'));
+    if (el) el.classList.add('is-active');
+  }
+
+  function switchPdpVariant(name, price, el) {
+    selectedVariantName = name;
+    currentPdpPrice = price;
+    document.getElementById('pdpPrice').innerText = price;
+    document.getElementById('pdpAtcPrice').innerText = price;
+    document.querySelectorAll('.stormis-pdp-var-btn').forEach(b => b.classList.remove('is-active'));
+    if (el) el.classList.add('is-active');
+  }
+
+  function adjustPdpQty(delta) {
+    const input = document.getElementById('pdpQty');
+    let val = parseInt(input.value) || 1;
+    val = Math.max(1, val + delta);
+    input.value = val;
+  }
+
+  function handlePdpAddToCartAction() {
+    const qty = parseInt(document.getElementById('pdpQty').value) || 1;
+    if (typeof addProductToCart === 'function') {
+      addProductToCart(pData.title, currentPdpPrice, selectedVariantName, pData.imgMain, qty);
+    }
+  }
+
+  function handlePdpBuyNowAction() {
+    const qty = parseInt(document.getElementById('pdpQty').value) || 1;
+    if (typeof addProductToCart === 'function') {
+      addProductToCart(pData.title, currentPdpPrice, selectedVariantName, pData.imgMain, qty);
+    }
+    if (typeof openStormisCheckoutModal === 'function') {
+      openStormisCheckoutModal();
+    }
+  }
+</script>
+
+{% schema %}
+{
+  "name": "404 Product Fallback",
+  "settings": []
+}
+{% endschema %}

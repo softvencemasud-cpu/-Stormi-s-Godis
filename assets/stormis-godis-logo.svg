@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" width="260" height="60" fill="none">
+  <!-- Gold Crown / Nordic Swirl Emblem -->
+  <g transform="translate(10, 10)">
+    <path d="M12 4L16 14L24 6L21 24H3L0 6L8 14L12 4Z" fill="#E5A93C" stroke="#D4AF37" stroke-width="1" stroke-linejoin="round"/>
+    <circle cx="12" cy="2" r="1.5" fill="#FAF7F2"/>
+    <circle cx="0" cy="4" r="1.2" fill="#FAF7F2"/>
+    <circle cx="24" cy="4" r="1.2" fill="#FAF7F2"/>
+    <circle cx="12" cy="18" r="2" fill="#FAF7F2"/>
+  </g>
+  
+  <!-- Brand Wordmark -->
+  <text x="44" y="32" font-family="'Cormorant Garamond', serif" font-size="28" font-weight="700" fill="#FAF7F2" letter-spacing="1">Stormi’s</text>
+  <text x="145" y="32" font-family="'Great Vibes', cursive" font-size="34" font-weight="400" fill="#E5A93C">Godis</text>
+  
+  <!-- Subtitle Tagline -->
+  <text x="45" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" fill="#D5CBC0" letter-spacing="2.8">SWEDISH ARTISAN CONFECTIONERY</text>
+</svg>

@@ -1,0 +1,138 @@
+<style>
+  .stormis-sweet-club-dark {
+    padding: 110px 0;
+    background-color: #110E0D;
+    text-align: center;
+    border-top: 1px solid #28201B;
+  }
+  @media (max-width: 767px) {
+    .stormis-sweet-club-dark {
+      padding: 65px 0;
+    }
+  }
+  .stormis-sweet-club-dark__container {
+    width: 92% !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+  }
+  .stormis-sweet-club-dark__inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .stormis-sweet-club-dark__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    line-height: 1.15;
+    color: #FAF7F2;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  @media (max-width: 767px) {
+    .stormis-sweet-club-dark__title {
+      font-size: 34px;
+    }
+  }
+  .stormis-sweet-club-dark__desc {
+    font-size: 16px;
+    color: #D5CBC0;
+    line-height: 1.65;
+    margin-bottom: 36px;
+  }
+  .stormis-sweet-club-dark__form {
+    display: flex;
+    max-width: 540px;
+    margin: 0 auto 18px;
+    background: #1A1513;
+    border: 1px solid #4A3E37;
+    border-radius: 4px;
+    padding: 6px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  }
+  @media (max-width: 480px) {
+    .stormis-sweet-club-dark__form {
+      flex-direction: column;
+      padding: 12px;
+      gap: 10px;
+    }
+  }
+  .stormis-sweet-club-dark__input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    color: #FAF7F2;
+    outline: none;
+    padding: 12px 18px;
+  }
+  .stormis-sweet-club-dark__input::placeholder {
+    color: #8C8075;
+  }
+  .stormis-sweet-club-dark__btn {
+    padding: 14px 34px;
+    background: #E5A93C;
+    color: #110E0D;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .stormis-sweet-club-dark__btn:hover {
+    background: #F4C468;
+    box-shadow: 0 4px 16px rgba(229, 169, 60, 0.4);
+  }
+</style>
+
+<section class="stormis-sweet-club-dark">
+  <div class="stormis-sweet-club-dark__container">
+    <div class="stormis-sweet-club-dark__inner">
+      <div class="stormis-gold-divider">
+        <span>~ THE SWEET CLUB ~</span>
+      </div>
+      <h2 class="stormis-sweet-club-dark__title">A Little More Sweetness in Your Inbox</h2>
+      <p class="stormis-sweet-club-dark__desc">
+        Get first access to new seasonal collections, secret reserve batches, and gifting invitations. <strong>Enjoy 10% off your first artisan order.</strong>
+      </p>
+
+      {% form 'customer', class: 'stormis-sweet-club-dark__form-wrap' %}
+        {% if form.posted_successfully? %}
+          <div style="background:#1A2E20; color:#85E39E; padding:14px 22px; border-radius:4px; margin-bottom:16px; font-weight:500; border:1px solid #2A4E32;">
+            Thank you for joining the Sweet Club! Check your inbox for your 10% welcome gift.
+          </div>
+        {% else %}
+          <div class="stormis-sweet-club-dark__form">
+            <input type="hidden" name="contact[tags]" value="newsletter,sweet_club">
+            <input
+              type="email"
+              name="contact[email]"
+              id="SweetClubEmail"
+              class="stormis-sweet-club-dark__input"
+              placeholder="Enter your email address"
+              required
+              aria-label="Email address"
+            >
+            <button type="submit" class="stormis-sweet-club-dark__btn">
+              Subscribe
+            </button>
+          </div>
+        {% endif %}
+      {% endform %}
+      <p style="font-size: 13px; color: #8C8075;">We respect your privacy. Unsubscribe at any time with one click.</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Stormis Dark Sweet Club",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Stormis Dark Sweet Club"
+    }
+  ]
+}
+{% endschema %}

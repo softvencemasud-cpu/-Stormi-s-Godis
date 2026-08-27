@@ -1,0 +1,332 @@
+<style>
+  .stormis-reviews-dark {
+    padding: 100px 0;
+    background-color: #161210;
+    border-top: 1px solid #28201B;
+    border-bottom: 1px solid #28201B;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (max-width: 767px) {
+    .stormis-reviews-dark {
+      padding: 60px 0;
+    }
+  }
+  .stormis-reviews-dark__container {
+    width: 92% !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+  }
+  .stormis-reviews-dark__header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  .stormis-reviews-dark__title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 44px !important;
+    line-height: 1.15 !important;
+    color: #FAF7F2 !important;
+    margin-bottom: 12px !important;
+    font-weight: 600 !important;
+  }
+  @media (max-width: 767px) {
+    .stormis-reviews-dark__title {
+      font-size: 30px !important;
+    }
+  }
+
+  /* Carousel Track */
+  .stormis-reviews-carousel-wrap {
+    position: relative;
+    width: 100%;
+  }
+  .stormis-reviews-carousel {
+    overflow: hidden;
+    width: 100%;
+  }
+  .stormis-reviews-track {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    gap: 24px;
+  }
+  .stormis-review-slide {
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: calc((100% - 48px) / 3);
+    box-sizing: border-box;
+  }
+  @media (max-width: 991px) {
+    .stormis-review-slide {
+      flex: 0 0 calc((100% - 24px) / 2);
+      min-width: calc((100% - 24px) / 2);
+    }
+  }
+  @media (max-width: 640px) {
+    .stormis-review-slide {
+      flex: 0 0 100%;
+      min-width: 100%;
+    }
+  }
+  .stormis-review-dark-card {
+    background: #110E0D;
+    border-radius: 12px;
+    padding: 32px 26px;
+    border: 1px solid #382E29;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 16px 36px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .stormis-review-dark-card:hover {
+    transform: translateY(-4px);
+    border-color: #D4AF37;
+  }
+  .stormis-review-dark-card__stars {
+    color: #E5A93C;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+  .stormis-review-dark-card__quote {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.5;
+    color: #FAF7F2;
+    font-style: italic;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  .stormis-review-dark-card__author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid #28201B;
+  }
+  .stormis-review-dark-card__name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #E5A93C;
+  }
+  .stormis-review-dark-card__product {
+    font-size: 12px;
+    color: #B8AEA3;
+  }
+
+  /* Carousel Navigation Buttons & Dots */
+  .stormis-carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .stormis-carousel-arrow {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #1A1513;
+    border: 1px solid #382E29;
+    color: #FAF7F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.25s ease;
+  }
+  .stormis-carousel-arrow:hover {
+    background: #E5A93C;
+    color: #110E0D;
+    border-color: #E5A93C;
+  }
+  .stormis-carousel-dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .stormis-carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #382E29;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .stormis-carousel-dot.is-active {
+    width: 24px;
+    border-radius: 6px;
+    background: #E5A93C;
+  }
+</style>
+
+<section class="stormis-reviews-dark">
+  <div class="stormis-reviews-dark__container">
+    <div class="stormis-reviews-dark__header">
+      <div class="stormis-gold-divider">
+        <span>~ VERIFIED REVIEWS ~</span>
+      </div>
+      <h2 class="stormis-reviews-dark__title">Loved by Sweet-Tooths Everywhere</h2>
+      <p style="color: #D5CBC0; font-size: 15px;">Discover what our confectionery connoisseurs say about Stormi’s Godis.</p>
+    </div>
+
+    <div class="stormis-reviews-carousel-wrap">
+      <div class="stormis-reviews-carousel" id="stormisReviewsCarousel">
+        <div class="stormis-reviews-track" id="stormisReviewsTrack">
+          <!-- Slide 1 -->
+          <div class="stormis-review-slide">
+            <div class="stormis-review-dark-card">
+              <div class="stormis-review-dark-card__stars">★★★★★</div>
+              <p class="stormis-review-dark-card__quote">
+                “The lingonberry sour gummies are genuinely the best Swedish candy I’ve ever tasted. The packaging felt like unboxing haute couture.”
+              </p>
+              <div class="stormis-review-dark-card__author">
+                <span class="stormis-review-dark-card__name">Freja Lindström</span>
+                <span class="stormis-review-dark-card__product">Swedish Berry Collection</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="stormis-review-slide">
+            <div class="stormis-review-dark-card">
+              <div class="stormis-review-dark-card__stars">★★★★★</div>
+              <p class="stormis-review-dark-card__quote">
+                “Sent the deluxe gift box to my sister in Gothenburg for her birthday. She couldn’t stop raving about the single-origin sea salt truffles.”
+              </p>
+              <div class="stormis-review-dark-card__author">
+                <span class="stormis-review-dark-card__name">Elias Bergqvist</span>
+                <span class="stormis-review-dark-card__product">Nordic Chocolate Selection</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="stormis-review-slide">
+            <div class="stormis-review-dark-card">
+              <div class="stormis-review-dark-card__stars">★★★★★</div>
+              <p class="stormis-review-dark-card__quote">
+                “Finally authentic artisan candy that isn't loaded with artificial chemicals. Pure Nordic bliss in every bite.”
+              </p>
+              <div class="stormis-review-dark-card__author">
+                <span class="stormis-review-dark-card__name">Astrid Nygård</span>
+                <span class="stormis-review-dark-card__product">Scandinavian Candy Mix</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="stormis-review-slide">
+            <div class="stormis-review-dark-card">
+              <div class="stormis-review-dark-card__stars">★★★★★</div>
+              <p class="stormis-review-dark-card__quote">
+                “The Grand Keepsake Gift Box was the centerpiece at our holiday fika. The 24k gold chocolate ganache is unforgettable!”
+              </p>
+              <div class="stormis-review-dark-card__author">
+                <span class="stormis-review-dark-card__name">Magnus Söderberg</span>
+                <span class="stormis-review-dark-card__product">Premium Swedish Gift Box</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="stormis-review-slide">
+            <div class="stormis-review-dark-card">
+              <div class="stormis-review-dark-card__stars">★★★★★</div>
+              <p class="stormis-review-dark-card__quote">
+                “Prompt climate-safe delivery to the UK and the candy arrived fresh as if kettle-cooked this morning. Truly 5-star artisan craftsmanship.”
+              </p>
+              <div class="stormis-review-dark-card__author">
+                <span class="stormis-review-dark-card__name">Charlotte Evans</span>
+                <span class="stormis-review-dark-card__product">Swedish Berry Collection</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="stormis-carousel-nav">
+        <button type="button" class="stormis-carousel-arrow" onclick="moveReviewsCarousel(-1)" aria-label="Previous Review">←</button>
+        <div class="stormis-carousel-dots" id="stormisCarouselDots">
+          <!-- Dots rendered via JS -->
+        </div>
+        <button type="button" class="stormis-carousel-arrow" onclick="moveReviewsCarousel(1)" aria-label="Next Review">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let currentReviewIdx = 0;
+  const track = document.getElementById('stormisReviewsTrack');
+  const slides = document.querySelectorAll('.stormis-review-slide');
+  const dotsContainer = document.getElementById('stormisCarouselDots');
+
+  function getVisibleCount() {
+    if (window.innerWidth <= 640) return 1;
+    if (window.innerWidth <= 991) return 2;
+    return 3;
+  }
+
+  function getMaxIdx() {
+    return Math.max(0, slides.length - getVisibleCount());
+  }
+
+  function renderDots() {
+    if (!dotsContainer) return;
+    const max = getMaxIdx();
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i <= max; i++) {
+      const dot = document.createElement('div');
+      dot.className = `stormis-carousel-dot ${i === currentReviewIdx ? 'is-active' : ''}`;
+      dot.onclick = () => goToReview(i);
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updateCarousel() {
+    if (!track) return;
+    const slideWidth = slides[0].offsetWidth;
+    const gap = 24;
+    const offset = currentReviewIdx * (slideWidth + gap);
+    track.style.transform = `translateX(-${offset}px)`;
+    renderDots();
+  }
+
+  function moveReviewsCarousel(dir) {
+    const max = getMaxIdx();
+    currentReviewIdx += dir;
+    if (currentReviewIdx < 0) currentReviewIdx = max;
+    if (currentReviewIdx > max) currentReviewIdx = 0;
+    updateCarousel();
+  }
+
+  function goToReview(idx) {
+    currentReviewIdx = idx;
+    updateCarousel();
+  }
+
+  window.addEventListener('resize', () => {
+    if (currentReviewIdx > getMaxIdx()) currentReviewIdx = getMaxIdx();
+    updateCarousel();
+  });
+
+  renderDots();
+</script>
+
+{% schema %}
+{
+  "name": "Stormis Reviews Carousel",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Stormis Reviews Carousel"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,221 @@
+{
+  "sections": {
+    "163395609032bcfadc": {
+      "type": "breadcrumb",
+      "settings": {
+        "container": "container",
+        "text_alignment": "center",
+        "hide_current": false,
+        "hide_on_mb": false,
+        "animations": "inherit"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "Stormi’s Godis • Swedish Artisan Confectionery",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h2"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_saving": true,
+            "sale_badge_type": "percentage"
+          }
+        },
+        "visitors": {
+          "type": "visitors",
+          "settings": {
+            "color_scheme": "",
+            "live_views_text": "{count_number} confectionery lovers viewing this right now",
+            "live_views_range": "18-28",
+            "live_view_duration": "10",
+            "live_view_icon_blinks": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "size_title": "Size / Box Selection"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_atc_button": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "addons": {
+          "type": "addons",
+          "settings": {
+            "show_atcp": true,
+            "show_ask_a_question": true,
+            "show_social": true
+          }
+        },
+        "shipping": {
+          "type": "shipping",
+          "settings": {
+            "show_delivery_times": true,
+            "deliver_text": "Estimated Fresh Dispatch:",
+            "deliver_days": "3-5",
+            "date_format": "%b %d",
+            "show_shipping_text": true,
+            "shipping_heading": "Free Climate-Safe Shipping:",
+            "shipping_text": "<p>On all orders over $75 with protective temperature packaging.</p>"
+          }
+        },
+        "trust_badge": {
+          "type": "trust_badge",
+          "settings": {
+            "trust_badges_text": "<p>100% Satisfaction Guarantee • Handcrafted in Stockholm</p>",
+            "trust_badges_image_width": "320px",
+            "position": "below"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "visitors",
+        "variant_picker",
+        "buy_buttons",
+        "addons",
+        "shipping",
+        "trust_badge"
+      ],
+      "settings": {
+        "container": "container",
+        "layout": "layout-6",
+        "show_atwl": true,
+        "enable_history_state": true,
+        "enable_variant_group_images": true,
+        "disable_selected_variant_default": false,
+        "show_featured_media": false,
+        "show_zoom_button": true,
+        "enable_video_autoplay": false,
+        "show_nav_media_mobile": false,
+        "show_pagination_mobile": true,
+        "use_sticky_atc": true,
+        "use_sticky_atc_on_mobile": true,
+        "enable_dynamic_checkout": false,
+        "sticky_atc_wishtlist": false,
+        "sticky_atc_compare": false
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "header": "The Artisan Recipe & Story"
+          }
+        },
+        "tab_ingredients": {
+          "type": "tab",
+          "settings": {
+            "header": "Pure Nordic Ingredients",
+            "content": "<p>Crafted exclusively from wild-harvested lingonberries, forest raspberries, fair-trade single-estate cocoa beans, organic Swedish beet sugar, and pure botanical extracts. 100% free from artificial flavorings or high-fructose corn syrup.</p>",
+            "content_page": ""
+          }
+        },
+        "tab_gifting": {
+          "type": "tab",
+          "settings": {
+            "header": "Luxury Keepsake Packaging",
+            "content": "<p>Every confectionery box is housed in a rigid matte-finish keepsake case debossed with our signature gold seal, tied with satin ribbon. Includes complimentary handwritten note options at checkout.</p>",
+            "content_page": ""
+          }
+        },
+        "tab_shipping": {
+          "type": "tab",
+          "settings": {
+            "header": "Climate-Safe Fresh Delivery",
+            "content": "<p>Dispatched directly from Stockholm in insulated temperature-safe packaging to ensure that delicate gummies and rich chocolate ganache arrive in flawless gourmet condition.</p>",
+            "content_page": ""
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "tab_ingredients",
+        "tab_gifting",
+        "tab_shipping"
+      ],
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "default_open": true,
+        "padding_top": 40,
+        "padding_bottom": 80,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "remove_params": false,
+        "heading": "Pair With Other Swedish Delights",
+        "heading_size": "h3",
+        "text_align": "center",
+        "limit": 4,
+        "columns": 4,
+        "column_gap": 28,
+        "enable_slider": true,
+        "show_pagination": false,
+        "show_navigation": true,
+        "use_scroll_mobile": true,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "recent-viewed-products": {
+      "type": "recent-viewed-products",
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "heading": "Recently Viewed",
+        "heading_size": "h4",
+        "text_align": "left",
+        "limit": 4,
+        "columns": 4,
+        "column_gap": 28,
+        "enable_slider": true,
+        "show_pagination": false,
+        "show_navigation": true,
+        "use_scroll_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 80,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    }
+  },
+  "order": [
+    "163395609032bcfadc",
+    "main",
+    "product-details-tabs",
+    "product-recommendations",
+    "recent-viewed-products"
+  ]
+}

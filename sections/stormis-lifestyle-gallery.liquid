@@ -1,0 +1,208 @@
+<style>
+  .stormis-gallery-dark {
+    padding: 100px 0;
+    background-color: #161210;
+    border-top: 1px solid #28201B;
+    border-bottom: 1px solid #28201B;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  @media (max-width: 767px) {
+    .stormis-gallery-dark {
+      padding: 50px 0;
+    }
+  }
+  .stormis-gallery-dark__container {
+    width: 92% !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .stormis-gallery-dark__header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  .stormis-gallery-dark__title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 44px !important;
+    line-height: 1.15 !important;
+    color: #FAF7F2 !important;
+    margin-bottom: 12px !important;
+    font-weight: 600 !important;
+  }
+  @media (max-width: 767px) {
+    .stormis-gallery-dark__title {
+      font-size: 28px !important;
+    }
+  }
+  .stormis-gallery-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  @media (max-width: 991px) {
+    .stormis-gallery-grid-6 {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 16px !important;
+    }
+  }
+  @media (max-width: 640px) {
+    .stormis-gallery-grid-6 {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 10px !important;
+    }
+  }
+  .stormis-framed-card {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    display: block;
+    border: 2px solid #D4AF37 !important;
+    box-shadow: 0 16px 36px rgba(0,0,0,0.6);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .stormis-framed-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(212, 175, 55, 0.3);
+  }
+  .stormis-framed-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+  .stormis-framed-card:hover .stormis-framed-card__img {
+    transform: scale(1.06);
+  }
+  .stormis-framed-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(17, 14, 13, 0.92) 0%, rgba(17, 14, 13, 0.2) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px 14px;
+    color: #FAF7F2;
+  }
+  @media (max-width: 640px) {
+    .stormis-framed-card__overlay {
+      padding: 10px 8px;
+    }
+  }
+  .stormis-framed-card__tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #E5A93C;
+    margin-bottom: 3px;
+  }
+  @media (max-width: 640px) {
+    .stormis-framed-card__tag {
+      font-size: 8px;
+    }
+  }
+  .stormis-framed-card__name {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 20px !important;
+    color: #FAF7F2 !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
+  }
+  @media (max-width: 640px) {
+    .stormis-framed-card__name {
+      font-size: 14px !important;
+    }
+  }
+</style>
+
+<section class="stormis-gallery-dark">
+  <div class="stormis-gallery-dark__container">
+    <div class="stormis-gallery-dark__header">
+      <div class="stormis-gold-divider">
+        <span>~ GALLERY ~</span>
+      </div>
+      <h2 class="stormis-gallery-dark__title">
+        The Confectionery Gallery
+      </h2>
+      <p style="color: #D5CBC0; font-size: 14px;">An exquisite visual journey through our handmade Swedish sweets, plated desserts, and gold-framed confectionery.</p>
+    </div>
+
+    <!-- 6-Item Gold-Framed Grid (2 on mobile) -->
+    <div class="stormis-gallery-grid-6">
+      <!-- 1 -->
+      <div class="stormis-framed-card">
+        <img src="{{ 'prod-berry-lifestyle.jpg' | asset_url }}" alt="Nordic Lingonberry Pralines" class="stormis-framed-card__img" loading="lazy" width="400" height="500">
+        <div class="stormis-framed-card__overlay">
+          <span class="stormis-framed-card__tag">Signature Godis</span>
+          <h3 class="stormis-framed-card__name">Nordic Berry Confection</h3>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="stormis-framed-card">
+        <img src="{{ 'prod-choco-lifestyle.jpg' | asset_url }}" alt="Single-Origin Ganache Truffles" class="stormis-framed-card__img" loading="lazy" width="400" height="500">
+        <div class="stormis-framed-card__overlay">
+          <span class="stormis-framed-card__tag">Gold Reserve</span>
+          <h3 class="stormis-framed-card__name">Dark Chocolate Pralines</h3>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="stormis-framed-card">
+        <img src="{{ 'stormis-lifestyle-banner.jpg' | asset_url }}" alt="Stockholm Fika Sweet Moments" class="stormis-framed-card__img" loading="lazy" width="400" height="500">
+        <div class="stormis-framed-card__overlay">
+          <span class="stormis-framed-card__tag">Atelier Experience</span>
+          <h3 class="stormis-framed-card__name">Stockholm Fika Moments</h3>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="stormis-framed-card">
+        <img src="{{ 'prod-mix-lifestyle.jpg' | asset_url }}" alt="Artisan Sweet Mix" class="stormis-framed-card__img" loading="lazy" width="400" height="500">
+        <div class="stormis-framed-card__overlay">
+          <span class="stormis-framed-card__tag">Artisan Mix</span>
+          <h3 class="stormis-framed-card__name">Scandinavian Pastilles</h3>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="stormis-framed-card">
+        <img src="{{ 'prod-choco-macro.jpg' | asset_url }}" alt="24k Gold Cocoa Truffles" class="stormis-framed-card__img" loading="lazy" width="400" height="500">
+        <div class="stormis-framed-card__overlay">
+          <span class="stormis-framed-card__tag">24K Gold Finish</span>
+          <h3 class="stormis-framed-card__name">Velvet Cocoa Truffles</h3>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="stormis-framed-card">
+        <img src="{{ 'prod-giftbox-main.jpg' | asset_url }}" alt="Luxury Keepsake Hamper" class="stormis-framed-card__img" loading="lazy" width="400" height="500">
+        <div class="stormis-framed-card__overlay">
+          <span class="stormis-framed-card__tag">Grand Keepsake</span>
+          <h3 class="stormis-framed-card__name">Royal Swedish Hamper</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Stormis Gold Gallery",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Stormis Gold Gallery"
+    }
+  ]
+}
+{% endschema %}

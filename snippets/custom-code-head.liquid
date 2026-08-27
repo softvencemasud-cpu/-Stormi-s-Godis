@@ -1,4 +1,4 @@
-<!-- Stormi's Godis Clean Scandinavian Luxury Fonts & Design System (White Theme) -->
+<!-- Stormi's Godis Dark Luxury Confectionery Fonts & Design System -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -8,23 +8,21 @@
     --font-script: 'Great Vibes', cursive;
     --font-heading: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
     --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    
-    /* White / Light Luxury Palette */
-    --color-bg-main: #FAF7F2;
-    --color-surface-white: #FFFFFF;
-    --color-surface-soft: #F4EFEA;
-    --color-text-dark: #110E0D;
-    --color-text-muted: #6E6259;
-    --color-gold: #C98D28;
-    --color-gold-hover: #B37A1D;
+    --color-bg-dark: #110E0D;
+    --color-surface-dark: #1A1513;
+    --color-surface-elevated: #241E1A;
+    --color-gold: #E5A93C;
+    --color-gold-light: #F4C468;
     --color-gold-border: #D4AF37;
-    --color-border-light: #E8E1D9;
+    --color-border-dark: #382E29;
+    --color-text-light: #FAF7F2;
+    --color-text-muted: #D5CBC0;
   }
 
   /* Global Layout & Unified Grid Alignment: w-11/12 mx-auto */
   body {
-    background-color: #FAF7F2 !important;
-    color: #110E0D !important;
+    background-color: #110E0D !important;
+    color: #FAF7F2 !important;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     overflow-x: hidden;
   }
@@ -72,7 +70,7 @@
 
   h1, h2, h3, h4, .m-heading, .m-font-heading, .m-hero__title, .m-section__heading, .m-richtext__title {
     font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif !important;
-    color: #110E0D !important;
+    color: #FAF7F2 !important;
     font-weight: 600;
   }
 
@@ -80,7 +78,7 @@
   .stormis-script {
     font-family: 'Great Vibes', cursive !important;
     font-weight: 400 !important;
-    color: #C98D28 !important;
+    color: #E5A93C !important;
     letter-spacing: 0.02em !important;
   }
 
@@ -89,33 +87,33 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
-    color: #C98D28;
-    font-size: 17px;
+    color: #E5A93C;
+    font-size: 18px;
     margin-bottom: 12px;
-    letter-spacing: 0.1em;
   }
   .stormis-gold-divider::before, .stormis-gold-divider::after {
     content: '';
     display: inline-block;
     width: 32px;
     height: 1px;
-    background: linear-gradient(to right, transparent, #C98D28);
+    background: linear-gradient(to right, transparent, #E5A93C);
   }
   .stormis-gold-divider::after {
-    background: linear-gradient(to left, transparent, #C98D28);
+    background: linear-gradient(to left, transparent, #E5A93C);
   }
 
   /* Transparent on Top & Sticky on Scroll Header */
   .m-header.transparent-on-top:not(.m-header--sticky) {
     background-color: transparent !important;
-    border-bottom: 1px solid rgba(17, 14, 13, 0.08) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
   .m-header--sticky,
   .m-header:not(.transparent-on-top) {
-    background-color: rgba(255, 255, 255, 0.96) !important;
+    background-color: rgba(17, 14, 13, 0.96) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
-    border-bottom: 1px solid #E8E1D9 !important;
+    border-bottom: 1px solid #28201B !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
   }
 
   .m-header__logo-text {
@@ -123,69 +121,41 @@
     font-size: 32px !important;
     font-weight: 700 !important;
     letter-spacing: 0.06em !important;
-    color: #110E0D !important;
+    color: #FAF7F2 !important;
   }
   .m-header__logo-text::after {
     content: ' Godis';
     font-family: 'Great Vibes', cursive !important;
-    color: #C98D28 !important;
+    color: #E5A93C !important;
     font-size: 36px !important;
     font-weight: 400 !important;
   }
 
   .m-announcement-bar {
-    background-color: #F4EFEA !important;
-    color: #110E0D !important;
-    border-bottom: 1px solid #E8E1D9 !important;
+    background-color: #1A1513 !important;
+    color: #E5A93C !important;
+    border-bottom: 1px solid #28201B !important;
     font-size: 13px !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.06em !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.08em !important;
   }
   .m-menu__item-link {
     font-size: 13px !important;
     font-weight: 600 !important;
     letter-spacing: 0.08em !important;
-    color: #110E0D !important;
+    color: #FAF7F2 !important;
     text-transform: uppercase !important;
   }
   .m-menu__item-link:hover {
-    color: #C98D28 !important;
+    color: #E5A93C !important;
   }
 
-  /* NO HOVER LIFT & NO SHADOW ON ANY CARDS (User Explicit Requirement) */
-  .stormis-card-dark,
-  .stormis-coll-card,
-  .stormis-category-dark-card,
-  .stormis-framed-card,
-  .stormis-feat-dark-card,
-  .stormis-review-dark-card,
-  .m-product-item,
-  .m-card,
-  .m-product-card {
-    box-shadow: none !important;
-    transform: none !important;
-    transition: border-color 0.25s ease !important;
-  }
-  .stormis-card-dark:hover,
-  .stormis-coll-card:hover,
-  .stormis-category-dark-card:hover,
-  .stormis-framed-card:hover,
-  .stormis-feat-dark-card:hover,
-  .stormis-review-dark-card:hover,
-  .m-product-item:hover,
-  .m-card:hover,
-  .m-product-card:hover {
-    box-shadow: none !important;
-    transform: none !important;
-    border-color: #C98D28 !important;
-  }
-
-  /* Gold Buttons */
+  /* Gold Standard Primary Buttons */
   .m-button--primary:not(.m-button--scroll-top):not(#scroll-to-top-button),
   .sf__btn-primary:not(.m-button--scroll-top):not(#scroll-to-top-button),
   .stormis-gold-btn {
-    background-color: #C98D28 !important;
-    color: #FFFFFF !important;
+    background-color: #E5A93C !important;
+    color: #110E0D !important;
     border-radius: 4px !important;
     border: none !important;
     padding: 15px 36px !important;
@@ -193,19 +163,19 @@
     font-weight: 700 !important;
     letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
-    transition: background-color 0.25s ease !important;
-    box-shadow: none !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 4px 16px rgba(229, 169, 60, 0.25) !important;
   }
   .m-button--primary:not(.m-button--scroll-top):not(#scroll-to-top-button):hover,
   .sf__btn-primary:not(.m-button--scroll-top):not(#scroll-to-top-button):hover,
   .stormis-gold-btn:hover {
-    background-color: #B37A1D !important;
-    color: #FFFFFF !important;
-    transform: none !important;
-    box-shadow: none !important;
+    background-color: #F4C468 !important;
+    color: #110E0D !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(229, 169, 60, 0.4) !important;
   }
 
-  /* Scroll-to-Top Button */
+  /* Circular Scroll-to-Top Button */
   #scroll-to-top-button,
   .m-button--scroll-top {
     width: 48px !important;
@@ -216,34 +186,70 @@
     max-height: 48px !important;
     border-radius: 50% !important;
     padding: 0 !important;
-    background-color: #C98D28 !important;
-    color: #FFFFFF !important;
+    background-color: #E5A93C !important;
+    color: #110E0D !important;
     border: 1px solid #D4AF37 !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-shadow: none !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 12px rgba(229, 169, 60, 0.35) !important;
   }
   #scroll-to-top-button:hover,
   .m-button--scroll-top:hover {
-    background-color: #B37A1D !important;
-    transform: none !important;
-    box-shadow: none !important;
+    background-color: #F4C468 !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 10px 25px rgba(229, 169, 60, 0.55) !important;
   }
   #scroll-to-top-button svg,
   .m-button--scroll-top svg {
     width: 18px !important;
     height: 18px !important;
     fill: none !important;
-    stroke: #FFFFFF !important;
-    color: #FFFFFF !important;
+    stroke: #110E0D !important;
+    color: #110E0D !important;
     stroke-width: 2.5px !important;
     display: block !important;
     margin: 0 !important;
   }
 
-  /* Template pages */
+  /* Single Product Page Dark Luxury Styling */
   .template-product, .template-collection, .template-page {
-    background-color: #FAF7F2 !important;
+    background-color: #110E0D !important;
+  }
+  .m-product-media--item, .m-product-media {
+    border-radius: 12px;
+    border: 1px solid #382E29;
+    background-color: #1A1513;
+  }
+  .m-product-title, .m-main-product__title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 42px !important;
+    color: #FAF7F2 !important;
+  }
+  .m-price-item--regular, .m-product-price {
+    color: #E5A93C !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+  }
+  .m-product-accordion__item {
+    border-color: #382E29 !important;
+    background: #1A1513 !important;
+  }
+  .m-product-accordion__title {
+    color: #FAF7F2 !important;
+    font-weight: 600 !important;
+  }
+
+  /* Footer styling */
+  .m-footer {
+    background-color: #0D0A09 !important;
+    border-top: 1px solid #28201B !important;
+    color: #FAF7F2 !important;
+  }
+  .m-footer a, .m-footer p, .m-footer span {
+    color: #B8AEA3 !important;
+  }
+  .m-footer a:hover {
+    color: #E5A93C !important;
   }
 </style>

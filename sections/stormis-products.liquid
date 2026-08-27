@@ -1,7 +1,7 @@
 <style>
   .stormis-products-dark {
     padding: 100px 0;
-    background-color: #FAF7F2;
+    background-color: #110E0D;
     width: 100%;
     box-sizing: border-box;
   }
@@ -25,7 +25,7 @@
     font-family: 'Cormorant Garamond', serif !important;
     font-size: 46px !important;
     line-height: 1.15 !important;
-    color: #110E0D !important;
+    color: #FAF7F2 !important;
     margin-bottom: 14px !important;
     font-weight: 600 !important;
   }
@@ -54,13 +54,12 @@
     }
   }
 
-  /* Flat, Clean White Cards - NO SHADOW & NO HOVER LIFT */
   .stormis-card-dark {
-    background: #FFFFFF;
+    background: #1A1513;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid #E8E1D9;
-    transition: border-color 0.25s ease;
+    border: 1px solid #382E29;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -68,27 +67,25 @@
     box-sizing: border-box;
     width: 100%;
     text-decoration: none;
-    box-shadow: none !important;
-    transform: none !important;
   }
   .stormis-card-dark:hover {
-    border-color: #C98D28 !important;
-    box-shadow: none !important;
-    transform: none !important;
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+    border-color: #D4AF37;
   }
   .stormis-card-dark__media {
     position: relative;
     width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    background-color: #F4EFEA;
+    background-color: #161210;
   }
   .stormis-card-dark__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.5s ease;
   }
   .stormis-card-dark__img--hover {
     position: absolute;
@@ -101,14 +98,15 @@
   }
   .stormis-card-dark:hover .stormis-card-dark__img--hover {
     opacity: 1;
+    transform: scale(1.05);
   }
   .stormis-card-dark__badge {
     position: absolute;
     top: 8px;
     left: 8px;
     padding: 3px 7px;
-    background: #C98D28;
-    color: #FFFFFF;
+    background: #E5A93C;
+    color: #110E0D;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -121,7 +119,6 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background: #FFFFFF;
   }
   @media (max-width: 640px) {
     .stormis-card-dark__body {
@@ -132,7 +129,7 @@
     font-family: 'Cormorant Garamond', serif !important;
     font-size: 20px !important;
     line-height: 1.2 !important;
-    color: #110E0D !important;
+    color: #FAF7F2 !important;
     margin-bottom: 6px !important;
     font-weight: 600 !important;
   }
@@ -144,7 +141,7 @@
   }
   .stormis-card-dark__desc {
     font-size: 12px;
-    color: #6E6259;
+    color: #D5CBC0;
     line-height: 1.45;
     margin-bottom: 12px;
     flex-grow: 1;
@@ -159,22 +156,22 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
-    border-top: 1px solid #E8E1D9;
+    border-top: 1px solid #2D2520;
     margin-top: auto;
   }
   .stormis-card-dark__price {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 17px;
     font-weight: 700;
-    color: #C98D28;
+    color: #E5A93C;
   }
   .stormis-card-dark__btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 8px 14px;
-    background: #C98D28;
-    color: #FFFFFF;
+    background: #E5A93C;
+    color: #110E0D;
     border: none;
     border-radius: 3px;
     font-size: 11px;
@@ -183,12 +180,11 @@
     text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.25s ease;
+    transition: all 0.25s ease;
     white-space: nowrap;
-    box-shadow: none !important;
   }
   .stormis-card-dark__btn:hover {
-    background: #B37A1D;
+    background: #F4C468;
   }
 
   /* Mobile Stacked Button and Price Layout */
@@ -225,7 +221,7 @@
       <h2 class="stormis-products-dark__title">
         The Signature Swedish Collection
       </h2>
-      <p style="color: #6E6259; font-size: 14px;">
+      <p style="color: #D5CBC0; font-size: 14px;">
         Handcrafted artisan sweets presented in luxury packaging with rich flavors and authentic Scandinavian recipes.
       </p>
     </div>
@@ -239,7 +235,7 @@
           <img src="{{ 'prod-berry-lifestyle.jpg' | asset_url }}" alt="Swedish Berry Collection Lifestyle" class="stormis-card-dark__img stormis-card-dark__img--hover" loading="lazy" width="400" height="400">
         </div>
         <div class="stormis-card-dark__body">
-          <div style="color: #C98D28; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
+          <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
           <h3 class="stormis-card-dark__name">Swedish Berry Collection</h3>
           <p class="stormis-card-dark__desc">Wild lingonberry & raspberry artisan gummies dusted with natural sour sugar.</p>
           <div class="stormis-card-dark__footer">
@@ -257,7 +253,7 @@
           <img src="{{ 'prod-choco-lifestyle.jpg' | asset_url }}" alt="Nordic Chocolate Selection Lifestyle" class="stormis-card-dark__img stormis-card-dark__img--hover" loading="lazy" width="400" height="400">
         </div>
         <div class="stormis-card-dark__body">
-          <div style="color: #C98D28; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
+          <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
           <h3 class="stormis-card-dark__name">Nordic Chocolate Selection</h3>
           <p class="stormis-card-dark__desc">Single-origin dark chocolate pralines & cocoa truffles with sea salt & 24k gold.</p>
           <div class="stormis-card-dark__footer">
@@ -275,7 +271,7 @@
           <img src="{{ 'prod-mix-lifestyle.jpg' | asset_url }}" alt="Scandinavian Candy Mix Lifestyle" class="stormis-card-dark__img stormis-card-dark__img--hover" loading="lazy" width="400" height="400">
         </div>
         <div class="stormis-card-dark__body">
-          <div style="color: #C98D28; font-size: 12px; margin-bottom: 4px;">★★★★★ 4.9</div>
+          <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 4.9</div>
           <h3 class="stormis-card-dark__name">Scandinavian Candy Mix</h3>
           <p class="stormis-card-dark__desc">Sour raspberry skulls, sweet salmiak licorice diamonds, and fruit pastilles.</p>
           <div class="stormis-card-dark__footer">
@@ -293,7 +289,7 @@
           <img src="{{ 'stormis-lifestyle-banner.jpg' | asset_url }}" alt="Premium Swedish Gift Box Lifestyle" class="stormis-card-dark__img stormis-card-dark__img--hover" loading="lazy" width="400" height="400">
         </div>
         <div class="stormis-card-dark__body">
-          <div style="color: #C98D28; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
+          <div style="color: #E5A93C; font-size: 12px; margin-bottom: 4px;">★★★★★ 5.0</div>
           <h3 class="stormis-card-dark__name">Premium Swedish Gift Box</h3>
           <p class="stormis-card-dark__desc">Rigid keepsake gift hamper box with gold debossed emblem and full assortment.</p>
           <div class="stormis-card-dark__footer">
@@ -308,11 +304,11 @@
 
 {% schema %}
 {
-  "name": "Stormis Light Products",
+  "name": "Stormis Dark Products",
   "settings": [],
   "presets": [
     {
-      "name": "Stormis Light Products"
+      "name": "Stormis Dark Products"
     }
   ]
 }

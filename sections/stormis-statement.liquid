@@ -1,61 +1,84 @@
 <style>
   .stormis-statement-dark {
-    padding: 80px 0;
-    background-color: #F4EFEA;
-    border-top: 1px solid #E8E1D9;
-    border-bottom: 1px solid #E8E1D9;
+    padding: 110px 0;
+    background-color: #0D0A09;
+    color: #FAF7F2;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid #28201B;
+    border-bottom: 1px solid #28201B;
     width: 100%;
     box-sizing: border-box;
   }
-  .stormis-statement-dark__container {
-    width: 92% !important;
-    max-width: 920px !important;
-    margin: 0 auto !important;
-  }
-  .stormis-statement-dark__quote {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-size: 38px !important;
-    line-height: 1.3 !important;
-    color: #110E0D !important;
-    font-weight: 500 !important;
-    margin-bottom: 16px !important;
-  }
   @media (max-width: 767px) {
-    .stormis-statement-dark__quote {
-      font-size: 26px !important;
+    .stormis-statement-dark {
+      padding: 70px 0;
     }
   }
-  .stormis-statement-dark__sub {
-    font-size: 14px;
-    color: #6E6259;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 600;
+  .stormis-statement-dark__container {
+    width: 92% !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+  }
+  .stormis-statement-dark__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .stormis-statement-dark__title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 50px !important;
+    line-height: 1.15 !important;
+    color: #FAF7F2 !important;
+    margin-bottom: 22px !important;
+    font-weight: 600 !important;
+  }
+  @media (max-width: 767px) {
+    .stormis-statement-dark__title {
+      font-size: 34px !important;
+    }
+  }
+  .stormis-statement-dark__title span {
+    font-family: 'Great Vibes', cursive !important;
+    color: #E5A93C !important;
+    font-size: 60px !important;
+  }
+  .stormis-statement-dark__desc {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #D5CBC0;
+    margin-bottom: 36px;
   }
 </style>
 
 <section class="stormis-statement-dark">
   <div class="stormis-statement-dark__container">
-    <div class="stormis-gold-divider">
-      <span>~ THE ART OF INDULGENCE ~</span>
-    </div>
-    <blockquote class="stormis-statement-dark__quote">
-      “Confectionery crafted not for haste, but for the sacred quiet joy of the Swedish <span class="stormis-script" style="font-size: 42px;">Fika</span>.”
-    </blockquote>
-    <div class="stormis-statement-dark__sub">
-      Stockholm • Handmade in Small Batches • Pure Nordic Botanicals
+    <div class="stormis-statement-dark__inner">
+      <div class="stormis-gold-divider">
+        <span>~ THE ART OF FIKA & MINDFUL INDULGENCE ~</span>
+      </div>
+      <h2 class="stormis-statement-dark__title">
+        Sweetness Worth <span>Slowing Down For</span>
+      </h2>
+      <p class="stormis-statement-dark__desc">
+        We craft confectionery designed to be savored slowly, shared joyfully, and remembered fondly. Pure European culinary heritage in every handcrafted bite.
+      </p>
+      <a href="/collections/all" class="stormis-gold-btn">
+        Explore All Sweets
+      </a>
     </div>
   </div>
 </section>
 
 {% schema %}
 {
-  "name": "Stormis Light Statement",
+  "name": "Stormis Dark Statement",
   "settings": [],
   "presets": [
     {
-      "name": "Stormis Light Statement"
+      "name": "Stormis Dark Statement"
     }
   ]
 }

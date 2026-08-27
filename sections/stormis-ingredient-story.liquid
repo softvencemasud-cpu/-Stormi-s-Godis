@@ -1,15 +1,13 @@
 <style>
   .stormis-ingredients-dark {
-    padding: 100px 0;
-    background-color: #FFFFFF;
-    border-top: 1px solid #E8E1D9;
-    border-bottom: 1px solid #E8E1D9;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 110px 0;
+    background-color: #161210;
+    border-top: 1px solid #28201B;
+    border-bottom: 1px solid #28201B;
   }
   @media (max-width: 767px) {
     .stormis-ingredients-dark {
-      padding: 60px 0;
+      padding: 65px 0;
     }
   }
   .stormis-ingredients-dark__container {
@@ -19,8 +17,8 @@
   }
   .stormis-ingredients-dark__grid {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 60px;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 70px;
     align-items: center;
   }
   @media (max-width: 991px) {
@@ -29,61 +27,67 @@
       gap: 40px;
     }
   }
-  .stormis-macro-wrap {
+  .stormis-ingredients-dark__image-wrap {
     border-radius: 12px;
     overflow: hidden;
-    aspect-ratio: 4 / 3;
-    border: 1px solid #E8E1D9;
-    box-shadow: none !important;
+    border: 1px solid #D4AF37;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.6);
   }
-  .stormis-macro-img {
+  .stormis-ingredients-dark__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
   .stormis-ingredients-dark__title {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-size: 42px !important;
-    line-height: 1.15 !important;
-    color: #110E0D !important;
-    margin-bottom: 18px !important;
-    font-weight: 600 !important;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    line-height: 1.15;
+    color: #FAF7F2;
+    margin-bottom: 22px;
+    font-weight: 600;
   }
   @media (max-width: 767px) {
     .stormis-ingredients-dark__title {
-      font-size: 28px !important;
+      font-size: 32px;
     }
   }
-  .stormis-ing-item {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 20px;
-    align-items: flex-start;
+  .stormis-ingredients-dark__desc {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #D5CBC0;
+    margin-bottom: 30px;
   }
-  .stormis-ing-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #FAF7F2;
-    border: 1px solid #E8E1D9;
-    color: #C98D28;
+  .stormis-dark-bullets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  @media (max-width: 480px) {
+    .stormis-dark-bullets {
+      grid-template-columns: 1fr;
+    }
+  }
+  .stormis-dark-bullet {
+    background: #110E0D;
+    border: 1px solid #382E29;
+    border-radius: 8px;
+    padding: 18px;
+  }
+  .stormis-dark-bullet h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #E5A93C;
+    margin: 0 0 4px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    font-size: 16px;
+    gap: 6px;
   }
-  .stormis-ing-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: #110E0D;
-    margin-bottom: 4px;
-  }
-  .stormis-ing-desc {
-    font-size: 14px;
-    color: #6E6259;
-    line-height: 1.6;
+  .stormis-dark-bullet p {
+    font-size: 12px;
+    color: #B8AEA3;
+    line-height: 1.45;
     margin: 0;
   }
 </style>
@@ -91,43 +95,39 @@
 <section class="stormis-ingredients-dark">
   <div class="stormis-ingredients-dark__container">
     <div class="stormis-ingredients-dark__grid">
-      <!-- Image Display -->
-      <div class="stormis-macro-wrap">
-        <img src="{{ 'prod-berry-macro.jpg' | asset_url }}" alt="Nordic Berry Texture" class="stormis-macro-img" loading="lazy" width="600" height="450">
-      </div>
-
-      <!-- Ingredients Story Content -->
-      <div>
+      <div class="stormis-ingredients-dark__content">
         <div class="stormis-gold-divider" style="justify-content: flex-start;">
           <span>~ THE DETAILS MATTER ~</span>
         </div>
         <h2 class="stormis-ingredients-dark__title">
-          Wild Nordic Berries & Single-Origin Cocoa
+          Made to Taste as Beautiful as It Looks
         </h2>
+        <p class="stormis-ingredients-dark__desc">
+          Every texture, aroma, and mouthfeel is engineered with deliberate care. From the gentle crunch of crystal sour sugar to the velvety melt of single-estate chocolate ganache, we elevate confectionery to an art form.
+        </p>
 
-        <div class="stormis-ing-item">
-          <div class="stormis-ing-icon">🌿</div>
-          <div>
-            <div class="stormis-ing-title">Hand-Harvested Wild Berries</div>
-            <p class="stormis-ing-desc">Wild lingonberries and cloudberries foraged from pristine northern Swedish forests.</p>
+        <div class="stormis-dark-bullets">
+          <div class="stormis-dark-bullet">
+            <h4><span>✦</span> Wild Berry Profiles</h4>
+            <p>Authentic lingonberry & forest raspberry extracts.</p>
+          </div>
+          <div class="stormis-dark-bullet">
+            <h4><span>✦</span> Rich Chocolate Notes</h4>
+            <p>Single-origin cocoa pralines with sea salt flakes.</p>
+          </div>
+          <div class="stormis-dark-bullet">
+            <h4><span>✦</span> Playful Textures</h4>
+            <p>Slowly kettle-cooked for the ideal artisan chew.</p>
+          </div>
+          <div class="stormis-dark-bullet">
+            <h4><span>✦</span> Balanced Sweetness</h4>
+            <p>Naturally sweetened with zero harsh artificial flavors.</p>
           </div>
         </div>
+      </div>
 
-        <div class="stormis-ing-item">
-          <div class="stormis-ing-icon">🍫</div>
-          <div>
-            <div class="stormis-ing-title">70% Single-Origin Dark Cocoa</div>
-            <p class="stormis-ing-desc">Ethically sourced cocoa beans infused with organic cream and 24k edible gold flakes.</p>
-          </div>
-        </div>
-
-        <div class="stormis-ing-item">
-          <div class="stormis-ing-icon">🌱</div>
-          <div>
-            <div class="stormis-ing-title">Gelatin-Free & Plant-Based Pectin</div>
-            <p class="stormis-ing-desc">100% natural fruit pectins and botanical extracts with zero artificial flavorings.</p>
-          </div>
-        </div>
+      <div class="stormis-ingredients-dark__image-wrap">
+        <img src="{{ 'prod-berry-macro.jpg' | asset_url }}" alt="Stormi's Godis Artisan Candy Texture" class="stormis-ingredients-dark__image" loading="lazy" width="600" height="480">
       </div>
     </div>
   </div>
@@ -135,11 +135,11 @@
 
 {% schema %}
 {
-  "name": "Stormis Light Ingredients",
+  "name": "Stormis Dark Ingredients",
   "settings": [],
   "presets": [
     {
-      "name": "Stormis Light Ingredients"
+      "name": "Stormis Dark Ingredients"
     }
   ]
 }

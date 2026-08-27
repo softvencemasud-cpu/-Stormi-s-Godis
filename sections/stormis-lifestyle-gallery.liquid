@@ -1,9 +1,9 @@
 <style>
   .stormis-gallery-dark {
     padding: 100px 0;
-    background-color: #FAF7F2;
-    border-top: 1px solid #E8E1D9;
-    border-bottom: 1px solid #E8E1D9;
+    background-color: #161210;
+    border-top: 1px solid #28201B;
+    border-bottom: 1px solid #28201B;
     width: 100%;
     box-sizing: border-box;
   }
@@ -27,7 +27,7 @@
     font-family: 'Cormorant Garamond', serif !important;
     font-size: 44px !important;
     line-height: 1.15 !important;
-    color: #110E0D !important;
+    color: #FAF7F2 !important;
     margin-bottom: 12px !important;
     font-weight: 600 !important;
   }
@@ -55,37 +55,37 @@
       gap: 10px !important;
     }
   }
-
-  /* Flat Gold Framed Cards - NO SHADOW & NO HOVER LIFT */
   .stormis-framed-card {
     position: relative;
     border-radius: 6px;
     overflow: hidden;
     aspect-ratio: 4 / 5;
     display: block;
-    border: 2px solid #C98D28 !important;
-    transition: border-color 0.25s ease;
+    border: 2px solid #D4AF37 !important;
+    box-shadow: 0 16px 36px rgba(0,0,0,0.6);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
     text-decoration: none;
     box-sizing: border-box;
     width: 100%;
-    box-shadow: none !important;
-    transform: none !important;
   }
   .stormis-framed-card:hover {
-    border-color: #110E0D !important;
-    box-shadow: none !important;
-    transform: none !important;
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(212, 175, 55, 0.3);
   }
   .stormis-framed-card__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.6s ease;
+  }
+  .stormis-framed-card:hover .stormis-framed-card__img {
+    transform: scale(1.06);
   }
   .stormis-framed-card__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(17, 14, 13, 0.9) 0%, rgba(17, 14, 13, 0.15) 60%, transparent 100%);
+    background: linear-gradient(to top, rgba(17, 14, 13, 0.92) 0%, rgba(17, 14, 13, 0.2) 60%, transparent 100%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -133,7 +133,7 @@
       <h2 class="stormis-gallery-dark__title">
         The Confectionery Gallery
       </h2>
-      <p style="color: #6E6259; font-size: 14px;">An exquisite visual journey through our handmade Swedish sweets, plated desserts, and gold-framed confectionery.</p>
+      <p style="color: #D5CBC0; font-size: 14px;">An exquisite visual journey through our handmade Swedish sweets, plated desserts, and gold-framed confectionery.</p>
     </div>
 
     <!-- 6-Item Gold-Framed Grid (2 on mobile) -->
@@ -197,11 +197,11 @@
 
 {% schema %}
 {
-  "name": "Stormis Light Gallery",
+  "name": "Stormis Gold Gallery",
   "settings": [],
   "presets": [
     {
-      "name": "Stormis Light Gallery"
+      "name": "Stormis Gold Gallery"
     }
   ]
 }
